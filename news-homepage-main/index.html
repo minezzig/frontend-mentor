@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Inter:wght@400;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dim"></div>
+      <header class="nav">
+        <div class="nav-logo">
+          <img src="./assets/images/logo.svg" />
+        </div>
+
+        <ul class="nav-items">
+          <img
+            class="nav-close-button"
+            src="./assets/images/icon-menu-close.svg"
+            alt=""
+          />
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+        <div class="nav-hamburger">
+          <img src="./assets/images/icon-menu.svg" />
+        </div>
+      </header>
+
+      <div class="two-column">
+        <section>
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="./assets/images/image-web-3-mobile.jpg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/image-web-3-desktop.jpg"
+            />
+            <img
+              class="hero-image"
+              src="./assets/images/image-web-3-mobile.jpg"
+            />
+          </picture>
+          <div class="two-column">
+            <h1 class="main-title">The Bright Future of Web 3.0?</h1>
+
+            <p class="main-text">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+              <button class="main-btn">Read more</button>
+            </p>
+          </div>
+        </section>
+        <section class="blackout">
+          <h2>New</h2>
+          <article>
+            <h3>Hydrogen VS Electric Cars</h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+          <hr />
+          <article>
+            <h3>The Downsides of AI Artistry</h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h3>Is VC Funding Drying Up?</h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
+        </section>
+      </div>
+      <section class="list">
+        <article>
+          <img src="./assets/images/image-retro-pcs.jpg" />
+          <div class="list-text">
+            <div class="number">01</div>
+            <h3>Reviving Retro PCs</h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </article>
+        <article>
+          <img src="./assets/images/image-top-laptops.jpg" />
+          <div class="list-text">
+            <div class="number">02</div>
+            <h3>Top 10 Laptops of 2022</h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </article>
+        <article>
+          <img src="./assets/images/image-gaming-growth.jpg" />
+          <div class="list-text">
+            <div class="number">03</div>
+            <h3>The Growth of Gaming</h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </article>
+      </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
