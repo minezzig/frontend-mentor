@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" class="css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+
+  <body>
+    <!-- Sign-up form start -->
+
+    <div class="container">
+      <div class="right">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/illustration-sign-up-desktop.svg"
+          />
+          <source
+            media="(min-width: 20px)"
+            srcset="assets/images/illustration-sign-up-mobile.svg"
+          />
+          <img src="assets/images/illustration-sign-up-mobile.svg" />
+        </picture>
+      </div>
+      <div class="left">
+        <h1>Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form class="form">
+          <label for="email" class="label">Email address</label
+          ><span class="error"></span>
+          <input type="text" class="email" placeholder="email@company.com" />
+          <button name="btn" class="btn">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+
+    <div class="blackout">
+      <div class="thanks">
+        <img src="./assets/images/icon-success.svg" />
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+        <button class="dismiss">Dismiss message</button>
+      </div>
+    </div>
+    <!-- Success message end -->
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault();
+        console.log();
+        if (!email.value.includes("@")) {
+          error.innerHTML = "Valid email requried";
+          input.style.backgroundColor = "lightpink";
+          input.style.border = "1px solid red";
+        } else {
+          error.innerHTML = "";
+          input.style.backgroundColor = "white";
+          input.style.border = "1px solid black";
+          blackout.style.display = "flex";
+          console.log(blackout)
+        }
+      }
+
+      const form = document.querySelector(".form");
+      const email = document.querySelector(".email");
+      const error = document.querySelector(".error");
+      const input = document.querySelector(".email");
+      const blackout = document.querySelector(".blackout");
+      const dismiss = document.querySelector(".dismiss");
+
+      form.onsubmit = handleSubmit;
+      dismiss.addEventListener("click", () => {
+        blackout.style.display = "none";
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
