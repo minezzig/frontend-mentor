@@ -24,19 +24,85 @@
     <header>
       <img src="./images/logo.svg" class="logo" />
     </header>
-    <form id="bill-splitter-form">
-      <main>
-        <div class="input">
-          <div class="bill-container">
-            <label for="bill">Bill</label>
+    <main>
+      <div class="input">
+        <div class="bill-container">
+          <label for="bill">Bill</label>
 
-            <div class="input-wrapper">
-              <img src="./images/icon-dollar.svg" alt="" />
-              <input type="number" name="bill" id="bill" placeholder="0" />
+          <div class="input-wrapper">
+            <img src="./images/icon-dollar.svg" alt="" />
+            <input type="number" name="bill" id="bill" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="tip-container">
+          <div class="label-wrapper">
+            <label for="tip">Select Tip %</label>
+          </div>
+          <div class="tip-wrapper">
+            <div class="tip" data-tip=".05">5%</div>
+            <div class="tip" data-tip=".10">10%</div>
+            <div class="tip" data-tip=".15">15%</div>
+            <div class="tip" data-tip=".25">25%</div>
+            <div class="tip" data-tip=".50">50%</div>
+            <input
+              type="number"
+              name="custom-tip"
+              id="custom-tip"
+              class="custom-tip"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+
+        <div class="people-container">
+          <div class="people-wrapper">
+            <label for="people">Number of People</label>
+            <div class="error">Can't be zero</div>
+          </div>
+          <div class="input-wrapper">
+            <img src="./images/icon-person.svg" alt="" />
+            <input type="number" name="people" id="people" placeholder="0" />
+          </div>
+        </div>
+      </div>
+
+      <div class="output">
+        <div class="line-wrapper">
+          <div class="line-output">
+            <div class="title-wrapper">
+              <div class="title">Tip Amount</div>
+              <div class="desc">/ person</div>
             </div>
+            <div id="tip-amount" class="value">$0.00</div>
           </div>
 
-          <div class="tip-container">
+          <div class="line-output">
+            <div class="title-wrapper">
+              <div class="title">Total</div>
+              <div class="desc">/ person</div>
+            </div>
+            <div id="total-amount" class="value">$0.00</div>
+          </div>
+        </div>
+        <div id="reset" class="btn">Reset</div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Greg Minezzi</a>.
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!--
+
+   <div class="tip-container">
             <label for="tip">Select Tip %</label>
             <ul class="tip-list">
               <li>
@@ -95,46 +161,4 @@
               </li>
             </ul>
           </div>
-
-          <div class="people-container">
-            <label for="people">Number of People</label>
-            <div class="input-wrapper">
-              <img src="./images/icon-person.svg" alt="" />
-              <input type="number" name="people" id="people" placeholder="0" />
-            </div>
-          </div>
-        </div>
-
-        <div class="output">
-          <div class="line-wrapper">
-            <div class="line-output">
-              <div class="title-wrapper">
-                <div class="title">Tip Amount</div>
-                <div class="desc">/ person</div>
-              </div>
-              <div id="tip-amount" class="value">$0.00</div>
-            </div>
-
-            <div class="line-output">
-              <div class="title-wrapper">
-                <div class="title">Total</div>
-                <div class="desc">/ person</div>
-              </div>
-              <div id="total-amount" class="value">$0.00</div>
-            </div>
-          </div>
-          <button type="submit" class="btn">Reset</button>
-        </div>
-      </main>
-    </form>
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Greg Minezzi</a>.
-      </div>
-    </footer>
-    <script src="index.js"></script>
-  </body>
-</html>
+-->
