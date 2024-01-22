@@ -67,11 +67,14 @@ input {
   font-size: 1.5rem;
   width: 100%;
   padding-inline: 1rem;
+  border-radius: 4px;
 }
 
+/* removes arrows from input type number */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  margin: 0;
 }
 
 input:focus,
@@ -88,7 +91,7 @@ input:active {
   margin-bottom: 2rem;
 }
 
-.tip-wrapper .tip {
+.tip:not(:last-child) {
   background-color: var(--very-dark-cyan);
   color: var(--white);
   border-radius: 4px;
@@ -103,7 +106,8 @@ input:active {
   margin: 0;
   font-family: "Space Mono", monospace;
   color: var(--very-dark-cyan);
-  text-align: center;
+
+  padding: 0.3rem;
 }
 
 .tip-wrapper input::placeholder {
@@ -111,14 +115,18 @@ input:active {
   text-align: center;
 }
 
-.tip:hover {
-  background: var(--primary);
+.tip:not(:last-child):hover {
+  background: var(--light-grayish-cyan);
   color: var(--white);
 }
 
-.tip.active {
+.tip:not(:last-child).active {
   background: var(--primary);
   color: var(--dark-grayish-cyan);
+}
+
+.tip.custom-active {
+  outline: 1px solid var(--primary);
 }
 
 .people-container .input-wrapper {
@@ -140,6 +148,9 @@ input:active {
   color: red;
   font-size: 1rem;
   display: none;
+}
+#people.invalid {
+  outline: 1px solid red;
 }
 
 .show {
@@ -190,13 +201,13 @@ input:active {
 }
 
 .btn.active:hover {
-  background-color: var(--white);
-  color: var(--primary);
+  background-color: var(--light-grayish-cyan);
+  color: var(--white);
 }
 
 .btn.active {
   background-color: var(--primary);
-  color: var(--white);
+  color: var(--very-dark-cyan);
 }
 
 .attribution {
@@ -210,7 +221,7 @@ a {
 
 @media (min-width: 768px) {
   body {
-    margin-top: 10%;
+    justify-content: center;
   }
 
   main {
@@ -229,52 +240,3 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
-/*
-.tip-list {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-  color: var(--white);
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.tip-list li {
-  height: 2.5rem;
-  background-color: var(--very-dark-cyan);
-  border-radius: 5px;
-  position: relative;
-}
-
-.tip-list li:hover {
-  background: var(--primary);
-  color: var(--vwhite);
-}
-
-.tip-list li:last-child {
-  background-color: var(--very-light-grayish-cyan);
-  color: var(--dark-grayish-cyan);
-}
-
-.tip-list label {
-  font-size: 1.5rem;
-}
-.tip-list input,
-.tip-list label {
-  position: absolute;
-  inset: 0;
-  text-align: center;
-}
-
-.tip-list input {
-  opacity: 0;
-}
-
-.tip-list input[type="radio"]:checked + label {
-  background: var(--primary);
-  color: var(--very-dark-cyan);
-  border-radius: 5px;
-}
-*/

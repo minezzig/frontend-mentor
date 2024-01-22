@@ -16,28 +16,33 @@ resetBtn.addEventListener("click", resetCalculator);
 
 function calculate() {
   error.classList.remove("show");
+  people.classList.remove("invalid");
   resetBtn.classList.add("active");
   if (people.value === "0") {
     error.classList.add("show");
+    people.classList.add("invalid");
     return;
   }
   if (customTip.value) {
     tipPercent = customTip.value / 100;
   }
-  const tipAmount = bill.value * (tipPercent || 0);
-  const perPerson = (+bill.value + tipAmount) / (people.value || 1);
-  tipAmountDiv.innerHTML = `$${tipAmount.toFixed(2)}`;
-  totalAmountDiv.innerHTML = `$${perPerson.toFixed(2)}`;
+
+  const totalTip = +bill.value * (tipPercent || 0);
+  const tipAmountPerPerson = +bill.value * (tipPercent || 0) / (+people.value || 1);
+  const totalPerPerson = (+bill.value + totalTip) / (+people.value || 1);
+  tipAmountDiv.innerHTML = `$${tipAmountPerPerson.toFixed(2)}`;
+  totalAmountDiv.innerHTML = `$${totalPerPerson.toFixed(2)}`;
 }
 
 function handleClick(e) {
   tips.forEach((tip) => {
     //remove any previous button selection
     tip.classList.remove("active");
+    tip.classList.remove("custom-active");
 
     //if the event matches the button, become active and record data attribute of tip
     if (e.target === tip) {
-      tip.classList.add("active");
+      tip.classList.contains("custom-tip") ? tip.classList.add("custom-active") : tip.classList.add("active");
       tipPercent = tip.dataset.tip;
       calculate();
     }
@@ -47,6 +52,7 @@ function handleClick(e) {
 function resetCalculator() {
   resetBtn.classList.remove("active");
   tips.forEach((tip) => tip.classList.remove("active"));
+  customTip.value = "";
   bill.value = "";
   people.value = "";
   tipAmountDiv.innerHTML = "$0.00";
