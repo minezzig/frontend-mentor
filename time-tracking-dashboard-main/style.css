@@ -1,0 +1,266 @@
+:root {
+  --card-blue: hsl(246, 80%, 60%);
+  --orange: hsl(15, 100%, 70%); /* work */
+  --blue: hsl(195, 74%, 62%); /* play */
+  --pink: hsl(348, 100%, 68%); /* study */
+  --green: hsl(145, 58%, 55%); /* exercise */
+  --purple: hsl(264, 64%, 52%); /* social */
+  --yellow: hsl(43, 84%, 65%); /* self-care */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  color: var(--pale-blue);
+  background-color: var(--very-dark-blue);
+}
+
+.wrapper {
+  display: grid;
+  width: 18.5rem;
+  margin: 50px auto;
+  grid-template-columns: 1fr;
+}
+
+.section {
+  border-radius: 15px;
+  background-color: var(--dark-blue);
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile .profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-blue);
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.profile img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.profile span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+.profile h1 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+
+.profile .view {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 1rem 0;
+  bottom: -2rem;
+  z-index: 1;
+  translate: 0 -1rem;
+}
+
+.btn {
+  border: none;
+  background: none;
+  color: var(--desaturated-blue);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn.current {
+  color: var(--pale-blue);
+}
+
+.ellipsis {
+  cursor: pointer;
+}
+
+.tab {
+  height: 3rem;
+  z-index: -5;
+  border-radius: 15px 15px 0 0;
+}
+.work .tab {
+  background-color: var(--orange);
+}
+.play .tab {
+  background-color: var(--blue);
+}
+.study .tab {
+  background-color: var(--pink);
+}
+.exercise .tab {
+  background-color: var(--green);
+}
+.social .tab {
+  background-color: var(--purple);
+}
+.self-care .tab {
+  background-color: var(--yellow);
+}
+
+.tab img {
+  position: absolute;
+  right: 0.8rem;
+  top: -0.2rem;
+  width: 3.5rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+  width: 100%;
+  padding: 2rem 2rem 1rem;
+  border-radius: 15px;
+  z-index: 1;
+  translate: 0 -1rem;
+  position: relative;
+}
+
+.extra {
+  line-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.extra.open {
+  line-height: 1rem;
+  margin-top: 1rem;
+  translate: 0 0.5rem;
+  opacity: 1;
+}
+
+.card-content .section-title,
+.card-content .hours {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.current-hours {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.previous-hours {
+  font-size: 0.8rem;
+}
+
+.animate {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.attribution {
+  text-align: center;
+  font-size: .8rem;
+  padding-top: 1rem;
+}
+
+a,
+a:visited,
+a:focus {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--pale-blue);
+  opacity: 0.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* breakpoints for display that are largert than mobile*/
+@media screen and (min-width: 650px) {
+  .wrapper {
+    width: 100%;
+    max-width: 800px;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 10rem auto 0;
+  }
+
+  .profile {
+    grid-row: 1 / 3;
+  }
+
+  .profile .profile-content {
+    padding: 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .profile .profile-content img {
+    margin-bottom: 1rem;
+  }
+
+  .profile .profile-content h1 {
+    font-size: 2rem;
+  }
+
+  .profile .view {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 3rem;
+  }
+
+  .profile .view button {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+  .section {
+    margin: 0;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-content .section-title {
+    font-size: 0.8rem;
+  }
+  .card-content .hours {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    gap: 0.5rem;
+  }
+  .current-hours {
+    font-size: 2rem;
+  }
+  .previous-hours {
+    font-size: 0.7rem;
+  }
+}
