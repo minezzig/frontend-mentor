@@ -88,6 +88,11 @@ body {
 .button:hover {
   background-color: hsl(25, 97%, 33%);
 }
+
+.button:active {
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+}
 /* thankyou state */
 .thankyou-card {
   display: none;
@@ -126,4 +131,12 @@ body {
   text-align: center;
   line-height: 1.5;
   font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(25, 97%, 33%);
 }
