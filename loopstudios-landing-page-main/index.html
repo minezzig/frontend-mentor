@@ -41,22 +41,46 @@
     </style>
   </head>
   <body class="bg-white font-josefinaSans">
+    <!--I orginally used the following code to use Tailwind custom class to have a different img source depedning on screen size.  although
+        it did work at development, it no longer works and I'm not sure why.  I'm changed this to be a simple image
+
+      <header class="h-[calc(100dvh)] bg-[url('./images/mobile/image-hero.jpg')] bg-cover bg-center bg-no-repeat px-8 py-12 brightness-90 md:h-[calc(75vh)] md:bg-[url('./images/desktop/image-hero.jpg')] md:px-24 md:py-5">
+    -->
+
     <!-- added custom height properties so that image would be full screen (viewable area) on mobile-->
     <header
-      class="h-[calc(100dvh)] bg-[url('/images/mobile/image-hero.jpg')] bg-cover bg-center bg-no-repeat px-8 py-12 brightness-90 md:h-[calc(75vh)] md:bg-[url('/images/desktop/image-hero.jpg')] md:px-24 md:py-5"
+      class="h-[calc(100dvh)] bg-black px-8 py-12 brightness-90 md:h-[calc(75vh)] md:px-24 md:py-5"
     >
+      <div class="absolute inset-0 -z-10">
+        <!--picture element: img element is always on dom so that is what gets styled.  the source tags just provide the source-->
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="./images/mobile/image-hero.jpg"
+          />
+
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/desktop/image-hero.jpg"
+          />
+          <img
+            src="./images/desktop/image-hero.jpg"
+            class="h-full w-full object-cover"
+          />
+        </picture>
+      </div>
       <!------------------nav section ---------------->
       <nav class="flex items-center justify-between">
         <img src="./images/logo.svg" alt="" class="z-10 md:scale-125" />
         <div
           id="menu"
-          class="absolute inset-0 -translate-y-full bg-black px-8 py-12 transition md:static md:inset-auto md:translate-y-0 md:bg-transparent md:transition-none"
+          class="absolute inset-0 translate-x-full bg-black px-8 py-12 transition md:static md:inset-auto md:translate-x-0 md:bg-transparent md:transition-none"
         >
           <img
             src="./images/icon-close.svg"
             alt="click to open nav links"
             id="close"
-            class="float-right md:hidden"
+            class="float-right cursor-pointer md:hidden"
           />
 
           <ul
@@ -132,9 +156,9 @@
             <picture class="hover:opacity-70">
               <source
                 media="(min-width: 768px)"
-                srcset="/images/desktop/image-deep-earth.jpg"
+                srcset="./images/desktop/image-deep-earth.jpg"
               />
-              <img src="/images/mobile/image-deep-earth.jpg" />
+              <img src="./images/mobile/image-deep-earth.jpg" />
             </picture>
             <h3 class="absolute bottom-3 left-5">
               Deep<br />
@@ -145,9 +169,9 @@
             <picture class="hover:opacity-70">
               <source
                 media="(min-width: 768px)"
-                srcset="/images/desktop/image-night-arcade.jpg"
+                srcset="./images/desktop/image-night-arcade.jpg"
               />
-              <img src="/images/mobile/image-night-arcade.jpg" />
+              <img src="./images/mobile/image-night-arcade.jpg" />
             </picture>
             <h3 class="absolute bottom-3 left-5">Night <br />arcade</h3>
           </div>
@@ -155,9 +179,9 @@
             <picture class="hover:opacity-70">
               <source
                 media="(min-width: 768px)"
-                srcset="/images/desktop/image-soccer-team.jpg"
+                srcset="./images/desktop/image-soccer-team.jpg"
               />
-              <img src="/images/mobile/image-soccer-team.jpg" />
+              <img src="./images/mobile/image-soccer-team.jpg" />
             </picture>
             <h3 class="absolute bottom-3 left-5">Soccer <br />team vr</h3>
           </div>
@@ -165,9 +189,9 @@
             <picture class="hover:opacity-70">
               <source
                 media="(min-width: 768px)"
-                srcset="/images/desktop/image-grid.jpg"
+                srcset="./images/desktop/image-grid.jpg"
               />
-              <img src="/images/mobile/image-grid.jpg" class="" />
+              <img src="./images/mobile/image-grid.jpg" class="" />
             </picture>
             <h3 class="absolute bottom-3 left-5">The <br />grid</h3>
           </div>
@@ -175,9 +199,9 @@
             <picture class="hover:opacity-70">
               <source
                 media="(min-width: 768px)"
-                srcset="/images/desktop/image-from-above.jpg"
+                srcset="./images/desktop/image-from-above.jpg"
               />
-              <img src="/images/mobile/image-from-above.jpg" />
+              <img src="./images/mobile/image-from-above.jpg" />
             </picture>
             <h3 class="absolute bottom-3 left-5">From up <br />above vr</h3>
           </div>
@@ -185,9 +209,9 @@
             <picture class="hover:opacity-70">
               <source
                 media="(min-width: 768px)"
-                srcset="/images/desktop/image-pocket-borealis.jpg"
+                srcset="./images/desktop/image-pocket-borealis.jpg"
               />
-              <img src="/images/mobile/image-pocket-borealis.jpg" />
+              <img src="./images/mobile/image-pocket-borealis.jpg" />
             </picture>
             <h3 class="absolute bottom-3 left-5">Pocket <br />borealis</h3>
           </div>
@@ -195,9 +219,9 @@
             <picture class="hover:opacity-70">
               <source
                 media="(min-width: 768px)"
-                srcset="/images/desktop/image-curiosity.jpg"
+                srcset="./images/desktop/image-curiosity.jpg"
               />
-              <img src="/images/mobile/image-curiosity.jpg" />
+              <img src="./images/mobile/image-curiosity.jpg" />
             </picture>
             <h3 class="absolute bottom-3 left-5">The <br />curiosity</h3>
           </div>
@@ -205,15 +229,15 @@
             <picture class="hover:opacity-70">
               <source
                 media="(min-width: 768px)"
-                srcset="/images/desktop/image-fisheye.jpg"
+                srcset="./images/desktop/image-fisheye.jpg"
               />
-              <img src="/images/mobile/image-fisheye.jpg" />
+              <img src="./images/mobile/image-fisheye.jpg" />
             </picture>
             <h3 class="absolute bottom-3 left-5">Make it <br />fisheye</h3>
           </div>
         </div>
         <div
-          class="m-auto w-fit cursor-pointer px-10 py-3 uppercase outline md:absolute md:right-10 md:order-2 hover:bg-black hover:text-white"
+          class="m-auto w-fit cursor-pointer px-10 py-3 uppercase outline hover:bg-black hover:text-white md:absolute md:right-10 md:order-2"
         >
           See all
         </div>
@@ -237,13 +261,15 @@
       </div>
       <div class="md:flex md:flex-col">
         <div class="flex justify-center gap-5 p-5 md:justify-end">
-          <a href="#"><img src="/images/icon-facebook.svg" alt="facebook" /></a>
-          <a href="#"><img src="/images/icon-twitter.svg" alt="twitter" /></a>
           <a href="#"
-            ><img src="/images/icon-pinterest.svg" alt="pinterest"
+            ><img src="./images/icon-facebook.svg" alt="facebook"
+          /></a>
+          <a href="#"><img src="./images/icon-twitter.svg" alt="twitter" /></a>
+          <a href="#"
+            ><img src="./images/icon-pinterest.svg" alt="pinterest"
           /></a>
           <a href="#"
-            ><img src="/images/icon-instagram.svg" alt="instagram"
+            ><img src="./images/icon-instagram.svg" alt="instagram"
           /></a>
         </div>
 
