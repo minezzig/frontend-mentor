@@ -26,85 +26,68 @@
   <body>
     <!-- Sign-up form start -->
 
-    <div class="container">
-      <div class="right">
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcset="assets/images/illustration-sign-up-desktop.svg"
-          />
-          <source
-            media="(min-width: 20px)"
-            srcset="assets/images/illustration-sign-up-mobile.svg"
-          />
-          <img src="assets/images/illustration-sign-up-mobile.svg" />
-        </picture>
-      </div>
-      <div class="left">
-        <h1>Stay updated!</h1>
-
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-        <form class="form">
-          <label for="email" class="label">Email address</label
-          ><span class="error"></span>
-          <input type="text" class="email" placeholder="email@company.com" />
-          <button name="btn" class="btn">
-            Subscribe to monthly newsletter
-          </button>
-        </form>
+    <div class="card">
+      <div class="container">
+        <div class="right">
+          <div class="image">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="assets/images/illustration-sign-up-desktop.svg"
+              />
+              <img src="assets/images/illustration-sign-up-mobile.svg" />
+            </picture>
+          </div>
+        </div>
+        <div class="left">
+          <h1 class="title">Stay updated!</h1>
+          <div class="content">
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="list">
+              <li class="list-item">
+                Product discovery and building what matters
+              </li>
+              <li class="list-item">
+                Measuring to ensure updates are a success
+              </li>
+              <li class="list-item">And much more!</li>
+            </ul>
+          </div>
+          <form class="form">
+            <label for="email" class="label">Email address</label>
+            <div class="input-container">
+              <div class="error-message">Valid e-mail required</div>
+              <input
+                type="text"
+                class="email"
+                placeholder="email@company.com"
+              />
+            </div>
+            <button name="btn" class="btn">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
 
-    <div class="blackout">
+    <div class="overlay hidden">
       <div class="thanks">
         <img src="./assets/images/icon-success.svg" />
-        <h1>Thanks for subscribing!</h1>
-        <p>
-          A confirmation email has been sent to ash@loremcompany.com. Please
-          open it and click the button inside to confirm your subscription.
-        </p>
-        <button class="dismiss">Dismiss message</button>
+        <h1 class="title">Thanks for subscribing!</h1>
+        <div>
+          A confirmation email has been sent to
+          <span class="thanksEmail"></span> Please open it and click the button
+          inside to confirm your subscription.
+        </div>
       </div>
+      <button class="btn dismiss">Dismiss message</button>
     </div>
     <!-- Success message end -->
-    <script>
-      function handleSubmit(e) {
-        e.preventDefault();
-        console.log();
-        if (!email.value.includes("@")) {
-          error.innerHTML = "Valid email requried";
-          input.style.backgroundColor = "lightpink";
-          input.style.border = "1px solid red";
-        } else {
-          error.innerHTML = "";
-          input.style.backgroundColor = "white";
-          input.style.border = "1px solid black";
-          blackout.style.display = "flex";
-          console.log(blackout)
-        }
-      }
 
-      const form = document.querySelector(".form");
-      const email = document.querySelector(".email");
-      const error = document.querySelector(".error");
-      const input = document.querySelector(".email");
-      const blackout = document.querySelector(".blackout");
-      const dismiss = document.querySelector(".dismiss");
-
-      form.onsubmit = handleSubmit;
-      dismiss.addEventListener("click", () => {
-        blackout.style.display = "none";
-        input.value = "";
-      });
-    </script>
+    <script src="./index.js" />
   </body>
 </html>

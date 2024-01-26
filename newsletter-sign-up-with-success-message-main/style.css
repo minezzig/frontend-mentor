@@ -1,164 +1,179 @@
+:root {
+  --primary: hsl(4, 100%, 67%);
+  --color1: hsl(231, 7%, 60%);
+  --color2: hsl(235, 18%, 26%);
+  --color3: hsl(234, 29%, 20%);
+  --white: hsl(0, 0%, 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 body {
-  height: 100vh;
-  width: 100%;
-  background-color: hsl(234, 29%, 20%);
+  background-color: var(--color3);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
-img {
-  width: 100%;
-}
-
-.container {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 20px;
-  max-width: 900px;
   height: 100vh;
+}
+
+.card {
+  background-color: var(--white);
+  height: 100dvh;
   width: 100%;
-  border-radius: 0;
+  position: relative;
+  display: block;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+.title {
+  font-size: 2.3rem;
+  padding-bottom: 1rem;
+}
+
+.list {
   padding: 25px;
 }
 
-h1 {
-  padding: 20px 0;
-}
-
-ul {
-  padding: 25px;
-}
-
-li {
+.list li {
   list-style-image: url("./assets/images/icon-list.svg");
-  line-height: 20px;
-  padding: 10px;
+  line-height: 1.5rem;
+  padding-left: 1rem;
 }
 
-.bullet {
-  padding-right: 10px;
-}
 .label {
   font-size: 0.8rem;
   font-weight: 700;
 }
-.email,
-.btn {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid grey;
-  border-radius: 5px;
-}
 
 .email {
-  margin: 10px 0;
-  max-width: 400px;
+  border: 1px solid var(--color1);
+  border-radius: 5px;
+  width: 100%;
+  margin-block: 0.5rem;
+  padding: 1rem;
 }
 
-.btn {
-  background-color: black;
-  max-width: 400px;
-  color: white;
-  font-weight: 700;
-  cursor: pointer;
-}
-::placeholder {
-  opacity: 0.5;
+.email:focus {
+  outline: none;
 }
 
-.btn:active,
-.dismiss:active {
-  background: linear-gradient(to right, rgb(194, 49, 165), tomato);
-}
-
-.error {
-  float: right;
-  color: lightpink;
+.error-message {
+  display: none;
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  color: var(--primary);
   font-size: 0.8rem;
   font-weight: 700;
 }
 
-.blackout {
-  display: none;
+.email.invalid {
+  background-color: hsla(4, 100%, 67%, 20%);
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
-.thanks {
-  position: absolute;
-  inset: 0;
-  background: white;
-  padding-inline: 25px;
-  padding-top: 100px;
-}
-
-.thanks img {
-  width: 20%;
-}
-
-.dismiss {
-  position: absolute;
-  bottom: 30px;
-  width: 90%;
-  padding-block: 20px;
-  background-color: black;
+.btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color3);
+  border: 0;
+  border-radius: 5px;
+  margin-block: 0.5rem;
   color: white;
-  border-radius: 7px;
-  border: 1px solid black;
-  font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
 }
 
+::placeholder {
+  opacity: 0.5;
+}
+
+.btn:hover,
+.btn:active {
+  background: linear-gradient(to right, rgb(255, 82, 122), var(--primary));
+  box-shadow: 5px 10px 50px hsla(4, 100%, 67%, 50%);
+}
+.input-container {
+  position: relative;
+}
+
+.overlay.hidden,
+.card.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  background: var(--white);
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.thanks {
+  padding-top: 5rem;
+}
+
+.thanks img {
+  width: 50px;
+  margin-bottom: 2rem;
+}
+
+.thanksEmail {
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: row-reverse;
+  .card {
     border-radius: 20px;
-    height: 650px;
-    width: 100%;
-  }
-  .left {
-    padding: 20px;
+    padding: 1.5rem;
+    max-width: 850px;
+    height: auto;
   }
 
-  .blackout {
-    background-color: hsl(234, 29%, 20%);
+  .container {
+    flex-direction: row-reverse;
+  }
+
+  .overlay {
     position: absolute;
-    display: none;
-    inset: 0;
-    align-items: center;
-    justify-content: center;
+    height: auto;
+    border-radius: 20px;
+    max-width: 350px;
   }
+
   .thanks {
-    height: 400px;
-    width: 400px;
-    display: block;
-    position: relative;
-    border-radius: 20px;
-    padding-top: 20px;
+    padding-top: 0;
   }
-  .right {
-    padding: 25px;
+
+  .thanks img {
+    margin-bottom: 0;
   }
-  img {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+
+  .btn.dismiss {
+    margin-top: 2rem;
   }
 }
