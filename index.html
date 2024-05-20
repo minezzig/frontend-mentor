@@ -5,66 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor projects</title>
   </head>
+  <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        width:100%;
+        flex-direction: column;
+        align-items: center;
+        font-family:tahoma;
+        padding-inline:2rem;
+    }
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        color:lightslategray;
+        padding:2rem;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap:1rem;
+    }
+    li {
+      padding: 1rem;
+      background: lightslategrey;
+      border: 2px solid black;
+      width: 245px;
+      border-radius: 10px;
+      list-style: none;
+      cursor: pointer;
+      color:white;
+      text-align:center;
+    }
+
+    a {
+      text-decoration: none;
+      scale:1;
+      transition: all .2s ease-out;
+    }
+    a:hover{
+        scale:1.05;
+    }
+  </style>
   <body>
     <h1>Frontend Mentor Projects</h1>
-    <ul>
-      <li>
-        <a href="./loopstudios-landing-page-main/"
-          >loopstudios-landing-page-main</a
-        >
-      </li>
-      <li>
-        <a href="./easybank-landing-page-master/"
-          >easybank-landing-page-master</a
-        >
-      </li>
-      <li>
-        <a href="./sunnyside-agency-landing-page-main/"
-          >sunnyside-agency-landing-page-main</a
-        >
-      </li>
-      <li><a href="./news-homepage-main/">news-homepage-main</a></li>
-      <li>
-        <a href="./intro-section-with-dropdown-navigation-main/src/"
-          >intro-section-with-dropdown-navigation-main</a
-        >
-      </li>
-      <li>
-        <a href="./time-tracking-dashboard-main/"
-          >time-tracking-dashboard-main</a
-        >
-      </li>
-      <li><a href="./tip-calculator-app-main/">tip-calculator-app-main</a></li>
-      <li>
-        <a href="./newsletter-sign-up-with-success-message-main/"
-          >newsletter-sign-up-with-success-message-main</a
-        >
-      </li>
-      <li>
-        <a href="./interactive-rating-component-main/src/"
-          >interactive-rating-component-main</a
-        >
-      </li>
-      <li>
-        <a href="./results-summary-component-main/src/"
-          >results-summary-component-main</a
-        >
-      </li>
-      <li><a href="./faq-accordion-card-main/">faq-accordion-card-main</a></li>
 
-      <li>
+    <div class="projects">
+      <ul>
+        <a href="./loopstudios-landing-page-main/"
+          ><li>Landing page - Loop Studios</li></a
+        >
+
+        <a href="./easybank-landing-page-master/"
+          ><li>Landing page - easybank</li></a
+        >
+
+        <a href="./sunnyside-agency-landing-page-main/"
+          ><li>Landing page - Sunnyside Agency</li></a
+        >
+        <a href="./news-homepage-main/"><li>Landing page - newsfeed</li></a>
+
+        <a href="./intro-section-with-dropdown-navigation-main/src/"
+          ><li>Landing page - Snap</li></a
+        >
+
+        <a href="./time-tracking-dashboard-main/"
+          ><li>Time tracking dashboard</li></a
+        >
+        <a href="./tip-calculator-app-main/"
+          ><li>Tip calculator web app</li></a
+        >
+
+        <a href="./newsletter-sign-up-with-success-message-main/"
+          ><li>Newsletter signup</li></a
+        >
+
+        <a href="./interactive-rating-component-main/src/"
+          ><li>Ineractive rating component</li></a
+        >
+
+        <a href="./results-summary-component-main/src/"
+          ><li>Results summary widget</li></a
+        >
+        <a href="./faq-accordion-card-main/"><li>FAQ accordian card</li></a>
+
         <a href="./testimonials-grid-section-main/"
-          >testimonials-grid-section-main</a
+          ><li>Testimonials Grid</li></a
         >
-      </li>
-      <li>
+
         <a href="./article-preview-component-master/src/"
-          >article-preview-master</a
+          ><li>Blog post preview card</li></a
         >
-      </li>
-      <li>
-        <a href="./profile-card-component-main/">profile-card-component-main</a>
-      </li>
-    </ul>
+
+        <a href="./profile-card-component-main/"><li>Profile card</li></a>
+      </ul>
+    </div>
   </body>
 </html>
