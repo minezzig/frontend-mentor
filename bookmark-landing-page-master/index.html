@@ -23,6 +23,7 @@
   <body
     class="overflow-x-hidden bg-slate-100 font-rubik text-[1.125rem] text-grey"
   >
+    <!-- NAV -->
     <nav class="flex w-full items-center justify-between p-10 md:px-24">
       <div><img src="./images/logo-bookmark.svg" /></div>
       <div id="hamburger" class="md:hidden">
@@ -88,9 +89,17 @@
         </ul>
         <div class="absolute bottom-10 flex gap-10 md:hidden">
           <a href="#"
-            ><img src="./images/icon-facebook.svg" alt="facebook"
+            ><img
+              src="./images/icon-facebook.svg"
+              alt="facebook"
+              class="hover:scale-110"
           /></a>
-          <a href="#"><img src="./images/icon-twitter.svg" alt="twitter" /></a>
+          <a href="#"
+            ><img
+              src="./images/icon-twitter.svg"
+              alt="twitter"
+              class="hover:scale-110"
+          /></a>
         </div>
       </div>
     </nav>
@@ -139,24 +148,29 @@
         </p>
       </div>
       <div
-        class="my-16 flex flex-col items-center justify-center gap-5 md:flex-row"
+        class="my-16 flex w-full flex-col items-center justify-center text-lg md:flex-row"
       >
-        <hr class="w-full border-grey md:hidden" />
-        <div>
-          <span class="link-underline hover:text-red">Simple Bookmarking</span>
-          <hr class="w-full border-grey" />
+        <div
+          data-tab="one"
+          class="relative w-full border-b-2 border-t-2 py-4 text-center transition after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:border-t-0 md:after:w-full"
+        >
+          Simple Bookmarking
         </div>
-        <div>
-          <span class="hover:text-red"> Speedy Searching </span>
-          <hr class="w-full border-grey" />
+        <div
+          data-tab="two"
+          class="relative w-full border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
+        >
+          Speedy Searching
         </div>
-        <div>
-          <span class="hover:text-red">Easy Sharing</span>
-          <hr class="w-full border-grey" />
+        <div
+          data-tab="three"
+          class="relative w-full border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
+        >
+          Easy Sharing
         </div>
       </div>
       <!-- CARD 1 -->
-      <article class="flex flex-col gap-20 md:flex-row">
+      <article id="one" class="flex flex-col gap-20 md:flex-row">
         <div class="relative m-auto flex-1">
           <div
             class="absolute -bottom-12 -left-24 -z-10 h-5/6 w-full rounded-r-full bg-blue"
@@ -180,9 +194,12 @@
         </div>
       </article>
       <!-- CARD 2 -->
-      <article class="hidden flex-col gap-20 md:flex-row">
-        <div class="m-auto flex-1">
-          <img src="./images/illustration-features-tab-2.svg" />
+      <article id="two" class="hidden flex-col gap-20 md:flex-row">
+        <div class="relative m-auto flex-1">
+          <div
+            class="absolute -bottom-12 -left-24 -z-10 h-5/6 w-full rounded-r-full bg-blue"
+          ></div>
+          <div><img src="./images/illustration-features-tab-2.svg" /></div>
         </div>
         <div
           class="flex flex-1 flex-col items-center justify-center md:items-start"
@@ -200,9 +217,12 @@
         </div>
       </article>
       <!-- CARD 3 -->
-      <article class="hidden flex-col gap-20 md:flex-row">
-        <div class="m-auto flex-1">
-          <img src="./images/illustration-features-tab-3.svg" />
+      <article id="three" class="hidden flex-col gap-20 md:flex-row">
+        <div class="relative m-auto flex-1">
+          <div
+            class="absolute -bottom-12 -left-24 -z-10 h-5/6 w-full rounded-r-full bg-blue"
+          ></div>
+          <div><img src="./images/illustration-features-tab-3.svg" /></div>
         </div>
         <div
           class="flex flex-1 flex-col items-center justify-center md:items-start"
@@ -288,7 +308,7 @@
         </p>
       </div>
       <div
-        class="border-lightgrey flex w-full flex-col items-center justify-between border-b-2 border-t-2 py-3 text-dark"
+        class="border-lightgrey flex w-full flex-col items-center justify-between border-b-2 border-t-2 py-3 text-dark md:border-t-0"
       >
         <!-- Question 1 -->
         <div
@@ -515,21 +535,25 @@
           <ul
             class="flex flex-col items-center justify-center gap-5 text-sm font-thin uppercase text-grey md:flex-row"
           >
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Contact</li>
+            <li><a href="#" class="hover:text-red">Features</a></li>
+            <li><a href="#" class="hover:text-red">Pricing</a></li>
+            <li><a href="#" class="hover:text-red">Contact</a></li>
           </ul>
         </div>
         <div class="flex gap-5">
-          <div><img src="./images/icon-facebook.svg" /></div>
-          <div><img src="./images/icon-twitter.svg" /></div>
+          <div>
+            <img src="./images/icon-facebook.svg" class="hover:scale-110" />
+          </div>
+          <div>
+            <img src="./images/icon-twitter.svg" class="hover:scale-110" />
+          </div>
         </div>
       </div>
       <p class="attribution mb-5 text-center text-sm text-white">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Greg Minezzi</a>.
+        >. Coded by <a href="#" class="text-red">Greg Minezzi</a>.
       </p>
     </footer>
     <script src="./index.js"></script>
