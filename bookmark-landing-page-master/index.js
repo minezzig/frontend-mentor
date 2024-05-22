@@ -1,8 +1,11 @@
-const hamburger = document.getElementById("hamburger")
-const close = document.getElementById("close")
-const dropdown = document.getElementById("dropdown")
+const hamburger = document.getElementById("hamburger");
+const close = document.getElementById("close");
+const dropdown = document.getElementById("dropdown");
 //const answers = document.querySelectorAll("#answers")
-const arrows = document.querySelectorAll("#arrow")
+const arrows = document.querySelectorAll("#arrow");
+const email = document.getElementById("email");
+const error = document.getElementById("error")
+const submit = document.getElementById("submit");
 
 hamburger.addEventListener("click", () => {
     dropdown.classList.add("flex")
@@ -25,3 +28,9 @@ arrows.forEach(arrow => {
         arrow.parentElement.nextElementSibling.classList.toggle("opacity-100");
     })
 })
+
+submit.addEventListener("click", () => {
+    if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value)) error.classList.remove("hidden");
+    else error.classList.add("hidden")
+
+});
