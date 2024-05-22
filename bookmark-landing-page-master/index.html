@@ -21,7 +21,7 @@
     />
   </head>
   <body
-    class=" overflow-x-hidden bg-slate-100 font-rubik text-[1.125rem] text-grey"
+    class="overflow-x-hidden bg-slate-100 font-rubik text-[1.125rem] text-grey"
   >
     <!-- NAV -->
     <nav class="flex w-full items-center justify-between p-10 md:px-24">
@@ -107,7 +107,7 @@
     <section
       class="flex flex-col items-center p-10 md:flex-row-reverse md:px-24"
     >
-      <div class="relative mb-16 flex-1">
+      <div class="relative mb-16 flex-1 overflow-x-hidden">
         <div><img src="./images/illustration-hero.svg" /></div>
         <div
           class="absolute bottom-0 left-20 -z-10 h-4/5 w-full rounded-l-full bg-blue"
@@ -136,7 +136,8 @@
       </div>
     </section>
     <!-- FEATURES SECTION -->
-    <section id="features"
+    <section
+      id="features"
       class="flex flex-col items-center justify-center p-10 py-32 md:px-24"
     >
       <div class="max-w-xl">
@@ -152,19 +153,19 @@
       >
         <div
           data-tab="one"
-          class="cursor-pointer relative w-full border-b-2 border-t-2 py-4 text-center transition after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:border-t-0 md:after:w-full"
+          class="relative w-full cursor-pointer border-b-2 border-t-2 py-4 text-center transition after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:border-t-0 md:after:w-full"
         >
           Simple Bookmarking
         </div>
         <div
           data-tab="two"
-          class="cursor-pointer relative w-full border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
+          class="relative w-full cursor-pointer border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
         >
           Speedy Searching
         </div>
         <div
           data-tab="three"
-          class="cursor-pointer relative w-full border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
+          class="relative w-full cursor-pointer border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
         >
           Easy Sharing
         </div>
@@ -243,7 +244,9 @@
     <!-- EXTENSION SECTION -->
     <section class="p-10 md:px-24">
       <div class="flex flex-col items-center justify-center">
-        <h2 class="text-3xl font-bold text-dark">Download the extension</h2>
+        <h2 class="text-center text-3xl font-bold text-dark">
+          Download the extension
+        </h2>
         <p class="my-5 text-center md:text-left">
           We’ve got more browsers in the pipeline. Please do let us know if
           you’ve got a favourite you’d like us to prioritize.
@@ -493,7 +496,7 @@
                 src="./images/icon-error.svg"
                 class="absolute right-3 top-2 h-7"
               />
-              <div class="w-full bg-red p-2 text-xs italic -translate-y-1">
+              <div class="w-full -translate-y-1 bg-red p-2 text-xs italic">
                 Whoops, make sure it's an email
               </div>
             </div>
