@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +21,7 @@
     />
   </head>
   <body
-    class="overflow-x-hidden bg-slate-100 font-rubik text-[1.125rem] text-grey"
+    class=" overflow-x-hidden bg-slate-100 font-rubik text-[1.125rem] text-grey"
   >
     <!-- NAV -->
     <nav class="flex w-full items-center justify-between p-10 md:px-24">
@@ -69,7 +69,7 @@
           class="flex w-full flex-col items-center gap-5 text-2xl font-thin uppercase md:flex-row md:text-sm md:text-dark"
         >
           <hr class="w-full border-grey md:hidden" />
-          <a href="#" class="hover:text-red">
+          <a href="#features" class="hover:text-red">
             <li>Features</li>
           </a>
           <hr class="w-full border-grey md:hidden" />
@@ -77,7 +77,7 @@
             <li>Pricing</li>
           </a>
           <hr class="w-full border-grey md:hidden" />
-          <a href="#" class="hover:text-red">
+          <a href="#contact" class="hover:text-red">
             <li>Contact</li>
           </a>
           <hr class="w-full border-grey md:hidden" />
@@ -136,7 +136,7 @@
       </div>
     </section>
     <!-- FEATURES SECTION -->
-    <section
+    <section id="features"
       class="flex flex-col items-center justify-center p-10 py-32 md:px-24"
     >
       <div class="max-w-xl">
@@ -152,19 +152,19 @@
       >
         <div
           data-tab="one"
-          class="relative w-full border-b-2 border-t-2 py-4 text-center transition after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:border-t-0 md:after:w-full"
+          class="cursor-pointer relative w-full border-b-2 border-t-2 py-4 text-center transition after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:border-t-0 md:after:w-full"
         >
           Simple Bookmarking
         </div>
         <div
           data-tab="two"
-          class="relative w-full border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
+          class="cursor-pointer rrelative w-full border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
         >
           Speedy Searching
         </div>
         <div
           data-tab="three"
-          class="relative w-full border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
+          class="cursor-pointer rrelative w-full border-b-2 py-4 text-center transition after:bottom-0 after:left-1/2 after:h-1 after:w-36 after:-translate-x-1/2 after:bg-red hover:text-red md:after:w-full"
         >
           Easy Sharing
         </div>
@@ -469,7 +469,7 @@
       </button>
     </section>
     <!-- CONTACT -->
-    <section>
+    <section id="contact">
       <div
         class="flex w-full flex-col items-center justify-center bg-blue p-10 text-slate-100"
       >
@@ -493,7 +493,7 @@
                 src="./images/icon-error.svg"
                 class="absolute right-3 top-2 h-7"
               />
-              <div class="w-full bg-red p-2 text-xs italic">
+              <div class="w-full bg-red p-2 text-xs italic -translate-y-1">
                 Whoops, make sure it's an email
               </div>
             </div>

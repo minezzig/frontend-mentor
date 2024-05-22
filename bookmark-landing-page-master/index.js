@@ -57,7 +57,11 @@ questions.forEach((question) => {
 
 // email validation on submit
 submit.addEventListener("click", () => {
-  if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value))
+  if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value)) {
     error.classList.remove("hidden");
-  else error.classList.add("hidden");
+    email.classList.add("border-red", "border-2");
+  } else {
+    error.classList.add("hidden");
+    email.classList.remove("border-red", "border-2");
+  }
 });
