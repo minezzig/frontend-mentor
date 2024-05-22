@@ -291,7 +291,10 @@
         class="border-lightgrey flex w-full flex-col items-center justify-between border-b-2 border-t-2 py-3 text-dark"
       >
         <!-- Question 1 -->
-        <div id="question" class="flex w-full items-center justify-between cursor-pointer">
+        <div
+          id="question"
+          class="flex w-full cursor-pointer items-center justify-between transition hover:text-red"
+        >
           What is Bookmark?
           <svg
             class="cursor-pointer transition-all"
@@ -326,7 +329,10 @@
         class="border-lightgrey flex w-full flex-col items-center justify-between border-b-2 py-3 text-dark"
       >
         <!-- Question 2 -->
-        <div id="question" class="flex w-full items-center justify-between cursor-pointer">
+        <div
+          id="question"
+          class="flex w-full cursor-pointer items-center justify-between transition hover:text-red"
+        >
           How can I request a new browser?
           <svg
             class="cursor-pointer transition-all"
@@ -364,7 +370,10 @@
         class="border-lightgrey flex w-full flex-col items-center justify-between border-b-2 py-3 text-dark"
       >
         <!-- Question 3 -->
-        <div id="question" class="flex w-full items-center justify-between cursor-pointer">
+        <div
+          id="question"
+          class="flex w-full cursor-pointer items-center justify-between transition hover:text-red"
+        >
           Is there a mobile app?
           <svg
             class="cursor-pointer transition-all"
@@ -375,7 +384,7 @@
           >
             <path
               fill="none"
-              class=""
+              class="transition"
               stroke="#5267DF"
               stroke-width="3"
               d="M1 1l8 8 8-8"
@@ -400,7 +409,10 @@
         class="border-lightgrey flex w-full flex-col items-center justify-between border-b-2 py-3 text-dark"
       >
         <!-- Question 4 -->
-        <div id="question" class="flex w-full items-center justify-between cursor-pointer">
+        <div
+          id="question"
+          class="flex w-full cursor-pointer items-center justify-between transition hover:text-red"
+        >
           What about other Chromium browsers?
           <svg
             class="cursor-pointer transition-all"
@@ -450,22 +462,26 @@
         <div
           class="m-5 flex w-full flex-col items-center justify-center gap-3 md:flex-row"
         >
-
-            <div class="relative flex items-center flex-col w-full md:max-w-64">
-              <input
-                type="email"
-                id="email"
-                class=" w-full flex-1 rounded-md px-5 py-3 text-dark outline-none"
+          <div class="relative flex w-full flex-col items-center md:max-w-64">
+            <input
+              type="email"
+              id="email"
+              class="w-full flex-1 rounded-md px-5 py-3 text-dark outline-none"
+            />
+            <div id="error" class="hidden w-full">
+              <img
+                src="./images/icon-error.svg"
+                class="absolute right-3 top-2 h-7"
               />
-              <div id="error" class="w-full hidden">
-                <img src="./images/icon-error.svg" class="absolute right-3 top-2 h-7" />
-                <div class="w-full bg-red p-2 text-xs italic">
-                  Whoops, make sure it's an email
-                </div>
+              <div class="w-full bg-red p-2 text-xs italic">
+                Whoops, make sure it's an email
               </div>
- 
+            </div>
           </div>
-          <button id="submit" class="flex-2 w-full rounded-md bg-red py-3 md:max-w-32 border-2 shadow-md border-red hover:bg-slate-100 hover:text-red transition">
+          <button
+            id="submit"
+            class="flex-2 w-full rounded-md border-2 border-red bg-red py-3 shadow-md transition hover:bg-slate-100 hover:text-red md:max-w-32"
+          >
             Contact Us
           </button>
         </div>
