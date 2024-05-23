@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-family: tahoma;
+    padding-inline: 2rem;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    background-image: url("https://media.istockphoto.com/id/1672317574/photo/ama-dablam-mountain-peak.webp?b=1&s=170667a&w=0&k=20&c=Ea8yDEHpUemrRuMZUKGPDBE11YTWVksIupMN8FkEBf8=");
+    background-size: contain;
+    background-clip: text;
+    color: transparent;
+    padding: 2rem;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem 1rem;
+  }
+  li {
+    list-style-type: none;
+  }
+  .project {
+    background: lightslategrey;
+    border: 2px solid black;
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    scale: 1;
+    transition: all 0.2s ease-out;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.4);
+    overflow:hidden;
+  }
+  .project:hover {
+    scale: 1.05;
+  }
+
+  .project p {
+    position:absolute;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    padding-block: .5rem;
+    border-top: 2px solid black;
+  }
+  a {
+    text-decoration: none;
+    color:black;
+  }

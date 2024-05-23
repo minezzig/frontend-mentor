@@ -53,7 +53,7 @@ Live: [Bookmark landing page](https://frontendmentor-gm.vercel.app/bookmark-land
 
 ### What I learned
 
-Another project I'm really proud of!  Although the layout of this was pretty straight forward, there were a lot of opportunities to learn.  Additionally, I have become very reliant on frameworks such as React, this was  great opportunity to contiue working and learning skills in Vanilla JavaScript.  
+Another project I'm really proud of!  Although the layout of this was pretty straight forward, there were a lot of opportunities to learn.  Additionally, I have become very reliant on frameworks such as React, this was  great opportunity to continue working and learning skills in Vanilla JavaScript.  
 
 
 Some of the key take aways from this project are: 
