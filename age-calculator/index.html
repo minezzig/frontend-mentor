@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
     <title>Age Calculator</title>
-  </head>
-  <body>
-    <div class="app">
-      <h1 class="title">Calculate your age!</h1>
-      <div class="container">
-        <div class="inputContainer">
-          <div class="birthdayInput">
-            <label htmlfor="day">Day: </label>
-            <input id="birthdayDay" type="number" placeholder="DD" required/>
-            <p class="error"> </p>
-        </div>
-          <div class="birthdayInput">
-            <label htmlfor="month">Month: </label>
-            <input id="birthdayMonth" type="number" placeholder="MM" required/>
-            <p class="error"> </p>
-        </div>
-          <div class="birthdayInput">
-            <label htmlfor="year">Year: </label>
-            <input id="birthdayYear" type="number" placeholder="YYYY" required/>
-            <p class="error"> </p>  
-        </div>
-  
-        </div>        
-        <div class="buttonContainer">
-          <div class="line"></div>
-          <button id="button" class="button">GO</button>
-        </div>
-        <div class="results">
-          <li id="year">
-            <span class="number">- -</span>
-            years
-          </li>
-          <li id="month">
-            <span class="number">- -</span>
-            months
-          </li>
-          <li id="day">
-            <span class="number">- -</span>
-            days
-          </li>
-        </div>
+      <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="container">
+      <div class="inputContainer">
+        <div class="birthdayInput">
+          <label htmlfor="day">Day: </label>
+          <input id="birthdayDay" type="number" placeholder="DD" required/>
+          <p class="error"> </p>
+      </div>
+        <div class="birthdayInput">
+          <label htmlfor="month">Month: </label>
+          <input id="birthdayMonth" type="number" placeholder="MM" required/>
+          <p class="error"> </p>
+      </div>
+        <div class="birthdayInput">
+          <label htmlfor="year">Year: </label>
+          <input id="birthdayYear" type="number" placeholder="YYYY" required/>
+          <p class="error"> </p>  
+      </div>
+
+      </div>        
+      <div class="buttonContainer">
+        <div class="line"></div>
+        <div id="button" class="button"><img src="./assets/images/icon-arrow.svg"/></div>
+      </div>
+      <div class="results">
+        <li id="year">
+          <span class="number">- -</span>
+          years
+        </li>
+        <li id="month">
+          <span class="number">- -</span>
+          months
+        </li>
+        <li id="day">
+          <span class="number">- -</span>
+          days
+        </li>
       </div>
     </div>
-
-    <script src="./index.js"></script>
-  </body>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Greg Minezzi</a>.
+  </div>
+  <script src="./index.js"></script>
+</body>
 </html>

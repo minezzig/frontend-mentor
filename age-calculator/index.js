@@ -11,13 +11,28 @@ const time = {
   month: 2628000000,
   day: 86400000,
 };
+const shortMonths = ["9", "4", "6", "11"];
+let validated;
 
+// function to add error message and styles
+const addErrorStyles = (inputField, message, valid) => {
+  inputField.classList.add("error");
+  inputField.nextElementSibling.innerHTML = message;
+inputField.previousElementSibling.classList.add("error")
+  validated = valid;
+};
+
+// clears errors/styles from inputs on focus of individual input
 inputs.forEach((input) => {
   input.addEventListener("focus", () => {
     input.classList.remove("error");
     input.nextElementSibling.innerHTML = "";
+    input.previousElementSibling.classList.remove("error")
+    validated = true;
   });
 });
+
+// submit birthday date
 button.addEventListener("click", () => {
   // convert numbers to date
   birthday = new Date(
@@ -26,50 +41,58 @@ button.addEventListener("click", () => {
     birthdayDay.value
   );
 
-  // error month incorrect
-  if (birthdayMonth.value > 12) {
-    birthdayMonth.classList.add("error");
-    birthdayMonth.nextElementSibling.innerHTML = "must be a valid month";
-  }
-  // error if date in future
-  if (Date.now() < birthday) {
-    birthdayYear.classList.add("error");
-    birthdayYear.nextElementSibling.innerHTML = "must be in the past";
-  }
-  // error if missing data
-  if (!birthdayYear.value || !birthdayMonth.value || !birthdayDay.value) {
-    if (!birthdayDay.value) {
-      birthdayDay.classList.add("error");
-      birthdayDay.nextElementSibling.innerHTML = "must be a valid day";
-      console.log(birthdayDay.nextElementSibling);
-    }
-    if (!birthdayMonth.value) {
-      birthdayMonth.classList.add("error");
-      birthdayMonth.nextElementSibling.innerHTML = "must be a valid month";
-    }
-    if (!birthdayYear.value) {
-      birthdayYear.classList.add("error");
-      birthdayYear.nextElementSibling.innerHTML = "must be a valid year";
-    }
-    return;
-  }
+  // --------------error handling---------------
+  const validateInput = () => {
+    if (Date.now() < birthday)
+      addErrorStyles(birthdayYear, "must be in the past", false);
+    validateDay();
+    validateMonth();
+    validateYear();
 
-  const age = Date.now() - birthday;
+    return validated;
+  };
 
-  const years = Math.floor(age / time.year);
-  yearDiv.innerHTML = `  
+  const validateDay = () => {
+    if (!birthdayDay.value)
+      addErrorStyles(birthdayDay, "must be a valid day", false);
+    if (birthdayDay.value > 31)
+      addErrorStyles(birthdayDay, "must be a valid date", false);
+    if (shortMonths.includes(birthdayMonth.value))
+      addErrorStyles(birthdayDay, "must be a valid date", false);
+    if (birthdayMonth.value == 2 && birthdayDay > "28")
+      addErrorStyles(birthdayDay, "must be a valid date", false);
+  };
+
+  const validateMonth = () => {
+    if (!birthdayMonth.value)
+      addErrorStyles(birthdayMonth, "must be a valid month", false);
+    if (birthdayMonth.value > 12)
+      addErrorStyles(birthdayMonth, "must be a valid month", false);
+  };
+  const validateYear = () => {
+    if (!birthdayYear.value)
+      addErrorStyles(birthdayYear, "must be a valid year", false);
+  };
+
+  // don't calculate if there are errors
+  if (validateInput()) {
+    const age = Date.now() - birthday;
+
+    const years = Math.floor(age / time.year);
+    yearDiv.innerHTML = `  
   <span class="number">${years}</span> ${
-    years > 1 || years === 0 ? "years" : "year"
-  }`;
+      years > 1 || years === 0 ? "years" : "year"
+    }`;
 
-  const months = Math.floor((age % time.year) / time.month);
-  monthDiv.innerHTML = `
+    const months = Math.floor((age % time.year) / time.month);
+    monthDiv.innerHTML = `
   <span class="number">${months}</span> ${
-    months > 1 || months === 0 ? "months" : "month"
-  }`;
+      months > 1 || months === 0 ? "months" : "month"
+    }`;
 
-  const days = Math.floor((age % time.year) / time.day);
-  dayDiv.innerHTML = `
+    const days = Math.floor((age % time.year) / time.day);
+    dayDiv.innerHTML = `
   <span class="number">${days}</span> ${days > 1 || days === 0 ? "days" : "day"}
   `;
+  }
 });

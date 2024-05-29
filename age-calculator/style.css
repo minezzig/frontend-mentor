@@ -14,16 +14,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
 }
-.title {
-  color: var(--color);
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 20px;
-}
+
 .container {
   background-color: white;
-  max-width: 500px;
   padding: 20px;
   border-radius: 10px 10px 25% 10px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -46,9 +41,20 @@ body {
   font-weight: bold;
 }
 .birthdayInput input {
-  width: 100px;
+  width: 80px;
   border: 1px solid lightgrey;
   height: 2rem;
+  border-radius: 5px;
+  color: black;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+}
+.birthdayInput input:focus {
+  outline: none;
+  border-color: var(--color);
 }
 
 input,
@@ -57,9 +63,6 @@ input,
   font-size: 1rem;
   font-weight: bold;
 }
-input {
-  color: black;
-}
 
 .error {
   color: red;
@@ -67,6 +70,10 @@ input {
 }
 input.error {
   border-color: red;
+  font-size: inherit;
+}
+label.error{
+  color:red;
 }
 
 .buttonContainer {
@@ -75,6 +82,8 @@ input.error {
   align-items: center;
   justify-content: flex-start;
   align-self: flex-start;
+  position: relative;
+  margin-block: 20px;
 }
 .line {
   width: 100%;
@@ -85,30 +94,61 @@ input.error {
 .button {
   background: var(--color);
   color: white;
-  padding: 5px;
-  border-radius: 50%;
-  width: 50px;
+  padding: 15px;
+  width: 25px;
   aspect-ratio: 1;
+  border-radius: 50%;
   font-weight: 600;
-  right: -30px;
-  bottom: -30px;
+  left: 50%;
+  translate: -50% 0;
   border: none;
+  position: absolute;
+  transition: 0.3s;
+}
+.button:hover {
+  opacity: 0.7;
+}
+.button:active {
+  background: black;
+}
+.button img {
+  object-fit: fill;
+  width: 100%;
 }
 .results {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 30px;
 }
 .results li {
   list-style: none;
   padding: 10px;
   margin-left: 10px;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   font-style: italic;
 }
 
 .number {
   color: var(--color);
+}
+
+/* Desktop media query */
+@media (min-width: 768px) {
+  .container {
+    width: 500px;
+  }
+
+  .inputContainer {
+    justify-content: flex-start;
+  }
+  .buttonContainer {
+    margin-block: 0;
+  }
+
+  .button {
+    translate: -100% 0;
+    left: 100%;
+    margin: 0;
+  }
 }
