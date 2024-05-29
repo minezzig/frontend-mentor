@@ -46,6 +46,7 @@ body {
   height: 2rem;
   border-radius: 5px;
   color: black;
+  outline:none;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -66,9 +67,10 @@ input,
 
 .error {
   color: red;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }
 input.error {
+  outline:none;
   border-color: red;
   font-size: inherit;
 }
