@@ -28,16 +28,12 @@ tabs.forEach((tab) => {
       const curTab = document.getElementById(`${tab.dataset.tab}`);
       curTab.classList.add("hidden");
       curTab.classList.remove("flex");
-      //tab.classList.remove("border-red");
-      //also remove inital tab
       tab.classList.remove("after:absolute");
     });
     // only show the one that was clicked
     const clickedTab = document.getElementById(`${tab.dataset.tab}`);
     clickedTab.classList.add("flex");
     clickedTab.classList.remove("hidden");
-    //tab.classList.toggle("border-red");
-    // tab.classList.toggle("border-6");
     tab.classList.add("after:absolute");
   });
 });
