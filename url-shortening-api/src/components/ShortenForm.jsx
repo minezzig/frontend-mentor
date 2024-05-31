@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import LinkList from "./LinkList";
+import LinkList from "./UrlList";
 
 export default function ShortenForm() {
   const [longUrl, setLongUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [shortUrl, setShortUrl] = useState("sHoRtUrL");
-  const [urlList, setUrlList] = useState([{long: "https://wwww.google.com/", short: "sHoRtUrL"}])
+  const [urlList, setUrlList] = useState([{long: "https://wwww.google.com/", short: "sHoRtUrL"},{long: "https://wwww.matadornetwork.com/", short: "jIejfLjw3iI"}])
+  const [copied, setCopied] = useState("")
 
   const handleChange = (e) => {
     setLongUrl(e.target.value);
@@ -27,7 +28,10 @@ export default function ShortenForm() {
     console.log(longUrl, "===>", shortUrl);
   };
 
-
+  const handleCopy = (url) => {
+    navigator.clipboard.writeText(url)
+    setCopied(url)
+  }
 
   return (
     <div className="bg-gray-200 px-5 md:px-10">
@@ -47,7 +51,7 @@ export default function ShortenForm() {
             </div>
        
         </form>
-        <LinkList urlList={urlList}/>
+        <LinkList urlList={urlList} handleCopy={handleCopy} copied={copied}/>
 
       </div>
     </div>
