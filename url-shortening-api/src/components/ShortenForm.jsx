@@ -1,17 +1,55 @@
-import React from "react";
-import Button from "./Button";
+import React, { useState } from "react";
+import LinkList from "./LinkList";
 
 export default function ShortenForm() {
+  const [longUrl, setLongUrl] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [shortUrl, setShortUrl] = useState("sHoRtUrL");
+  const [urlList, setUrlList] = useState([{long: "https://wwww.google.com/", short: "sHoRtUrL"}])
+
+  const handleChange = (e) => {
+    setLongUrl(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const API_KEY = import.meta.env.VITE_API_KEY;
+    const API_URL = import.meta.env.VITE_API_URL;
+    const fetchURL = `${API_URL}?api_token=${API_KEY}`;
+
+    const url = longUrl;
+// FETCH API
+    setUrlList(prev => [{short: shortUrl, long: longUrl},...prev])
+    setLoading(false);
+    setLongUrl("");
+
+    console.log(longUrl, "===>", shortUrl);
+  };
+
+
+
   return (
-    <div className="bg-[url('./images/bg-shorten-mobile.svg')] md:bg-[url('./images/bg-shorten-desktop.svg')] bg-primary2 translate-y-1/2 m-5 mb-0 flex flex-col gap-5 rounded-lg p-5 md:m-10 md:mb-0 md:flex-row md:p-10">
-      <input
-        type="text"
-        placeholder="Shorten a link here..."
-        className="w-full rounded-md p-3"
-      ></input>
-      <button className="text-nowrap rounded-md bg-primary1 p-3 px-10 text-white">
-        Shorten It!
-      </button>
+    <div className="bg-gray-200 px-5 md:px-10">
+      <div className="-translate-y-16">
+        <form onSubmit={handleSubmit} className="w-full">
+          <div className="flex flex-col gap-5 mb-5 rounded-lg bg-primary2 bg-[url('./images/bg-shorten-mobile.svg')] p-5 md:flex-row md:bg-[url('./images/bg-shorten-desktop.svg')] md:p-10">
+            <input
+              type="text"
+              value={longUrl}
+              onChange={handleChange}
+              placeholder="Shorten a link here..."
+              className="w-full rounded-md p-3"
+            ></input>
+            <button className="text-nowrap rounded-md bg-primary1 p-3 px-10 text-white">
+              {loading ? "Shortening" : "Shorten It!"}
+            </button>
+            </div>
+       
+        </form>
+        <LinkList urlList={urlList}/>
+
+      </div>
     </div>
   );
 }

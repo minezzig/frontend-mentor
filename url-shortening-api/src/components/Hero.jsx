@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col px-5 pb-10 md:flex-row-reverse md:justify-between md:px-10">
+    <div className="flex flex-col pmx-5 mb-48 md:flex-row-reverse md:justify-between md:px-10">
       <div className="w-[140%] md:w-full md:translate-x-[10%]">
         <img
           src="./images/illustration-working.svg"
