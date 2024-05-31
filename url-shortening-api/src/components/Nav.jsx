@@ -9,7 +9,7 @@ export default function Nav() {
     }
 
   return (
-    <div className="w-full flex justify-between px-5 md:px-10 py-10">
+    <div className="w-full flex justify-between px-5 py-10  max-w-[1024px] m-auto">
         <div className="flex items-center mr-10"><img src="./images/logo.svg" alt="logo"/></div>
 
         {/* popup nav */}

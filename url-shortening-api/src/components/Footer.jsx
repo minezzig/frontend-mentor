@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center bg-neutral4 p-10 md:flex-row md:items-start md:justify-between">
-        <div className="mb-10">
+    <div className="bg-neutral4">
+      <div className="m-auto flex max-w-[1024px] flex-col items-center justify-center p-10 md:flex-row md:items-start md:justify-between ">
+        <div className="mb-10 ">
           <svg xmlns="http://www.w3.org/2000/svg" width="121" height="33">
             <path
               className="fill-white"
@@ -13,7 +13,7 @@ export default function Footer() {
             />
           </svg>
         </div>
-        <div className="flex flex-col gap-10 md:gap-28 px-10 text-xs md:flex-row">
+        <div className="flex flex-col gap-10 px-10 text-xs md:flex-row md:gap-28">
           <div>
             <p className="mb-5 w-full text-center font-bold text-white md:text-left">
               Features
@@ -46,7 +46,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="flex gap-5 mt-10 md:mt-0">
+        <div className="mt-10 flex gap-5 md:mt-0">
           <img src="./images/icon-facebook.svg" alt="" />
           <img src="./images/icon-twitter.svg" alt="" />
           <img src="./images/icon-pinterest.svg" alt="" />
