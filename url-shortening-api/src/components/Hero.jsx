@@ -1,12 +1,12 @@
-import React from "react";
 import Button from "./Button";
+import heroImage from "../../public/images/illustration-working.svg";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col mb-48 md:flex-row-reverse md:justify-between max-w-[1024px] m-auto">
+    <section className="flex flex-col px-5 mb-48 md:flex-row-reverse md:justify-between max-w-[1024px] m-auto overflow-x-hidden">
       <div className="w-[140%] md:w-full md:translate-x-[10%]">
         <img
-          src="./images/illustration-working.svg"
+          src={heroImage}
           alt="illustration"
           className="h-full object-cover object-left"
         />
@@ -21,6 +21,6 @@ export default function Hero() {
         </p>
         <Button text={"Get Started"} textColor={"text-white"} />
       </div>
-    </div>
+    </section>
   );
 }

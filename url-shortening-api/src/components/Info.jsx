@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "./Card";
 
 export default function Info() {
@@ -21,7 +20,7 @@ export default function Info() {
   ];
 
   return (
-    <div className="w-full bg-gray-200 px-5 py-48">
+    <section className="w-full bg-gray-200 px-5 py-48">
       <div className=" max-w-[1024px] m-auto">
         <div className="mb-24 flex w-full flex-col items-center justify-center gap-7">
           <p className="text-center text-4xl font-bold text-neutral3">
@@ -33,12 +32,13 @@ export default function Info() {
           </p>
         </div>
         <div className="relative flex flex-col gap-24 lg:flex-row md:gap-12">
+
           <div className="absolute right-1/2 top-0 h-full w-2 translate-x-1/2 bg-primary1 md:top-1/2 md:h-2 md:w-full md:translate-y-1/2"></div>
           {cards.map((card, i) => (
             <Card key={i} index={i} card={card} />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

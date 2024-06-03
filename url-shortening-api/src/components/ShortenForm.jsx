@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import LinkList from "./UrlList";
 
 export default function ShortenForm() {
@@ -56,7 +56,7 @@ export default function ShortenForm() {
   };
 
   return (
-    <div className="bg-gray-200 px-5 ">
+    <section className="bg-gray-200 px-5 ">
       <div className="m-auto  max-w-[1024px] -translate-y-16">
         <form onSubmit={handleSubmit} className="w-full">
           <div className="mb-5 flex flex-col gap-5 rounded-lg bg-primary2 bg-[url('./images/bg-shorten-mobile.svg')] p-5 md:flex-row md:bg-[url('./images/bg-shorten-desktop.svg')] md:p-10">
@@ -74,6 +74,6 @@ export default function ShortenForm() {
         </form>
         <LinkList urlList={urlList} handleCopy={handleCopy} copied={copied} />
       </div>
-    </div>
+    </section>
   );
 }
