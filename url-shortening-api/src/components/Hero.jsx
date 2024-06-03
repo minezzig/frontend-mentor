@@ -12,9 +12,9 @@ export default function Hero() {
         />
       </div>
       <div className="my-10 flex w-full max-w-[500px] flex-col items-center justify-center gap-7 md:items-start">
-        <p className="text-center text-4xl font-bold text-neutral3 md:text-left md:text-6xl">
+        <h1 className="text-center text-4xl font-bold text-neutral3 md:text-left md:text-6xl">
           More than just shorter links
-        </p>
+        </h1>
         <p className="text-center md:text-left">
           Build your brand's recognition and get detailed insights on how your
           links are performing.
