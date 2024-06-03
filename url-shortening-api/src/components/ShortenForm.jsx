@@ -75,11 +75,11 @@ export default function ShortenForm() {
   };
 
   return (
-    <section className="bg-gray-200 px-5 ">
+    <section className="bg-gray-200 px-5 py-0">
       <div className="m-auto  max-w-[1024px] -translate-y-16">
         <form onSubmit={handleSubmit} className="w-full">
           <div className="mb-5 flex flex-col gap-5 rounded-lg bg-primary2 bg-[url('./images/bg-shorten-mobile.svg')] p-5 md:flex-row md:bg-[url('./images/bg-shorten-desktop.svg')] md:p-10">
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full relative">
               <input
                 type="text"
                 value={longUrl}
@@ -89,7 +89,7 @@ export default function ShortenForm() {
                 className={`w-full rounded-md p-3 ${error ? " outline outline-4 outline-red-400" : ""} focus:outline-none`}
               ></input>
               {error && (
-                <p className="-mt-2 bottom-8 md:absolute text-xs italic text-red-400">{error}</p>
+                <p className="mt-2 md:-bottom-6 md:absolute text-xs italic text-red-400">{error}</p>
               )}
             </div>
             <button className="text-nowrap rounded-md bg-primary1 p-3 px-10 text-white">

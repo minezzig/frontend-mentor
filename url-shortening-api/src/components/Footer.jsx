@@ -1,5 +1,10 @@
 import React from "react";
 import logo from "/images/logo-footer.svg";
+import twitter from "/images/icon-twitter.svg";
+import facebook from "/images/icon-facebook.svg";
+import instagram from "/images/icon-instagram.svg";
+import pinterest from "/images/icon-pinterest.svg";
+
 
 export default function Footer() {
   return (
@@ -14,9 +19,9 @@ export default function Footer() {
               Features
             </p>
             <ul className="flex flex-col items-center justify-center gap-5 md:items-start">
-              <li>Link Shortening</li>
-              <li>Branded Links</li>
-              <li>Analytics</li>
+              <li><a href="#" className="hover:text-primary1">Link Shortening</a></li>
+              <li><a href="#" className="hover:text-primary1">Branded Links</a></li>
+              <li><a href="#" className="hover:text-primary1">Analytics</a></li>
             </ul>
           </div>
           <div>
@@ -24,9 +29,9 @@ export default function Footer() {
               Resources
             </p>
             <ul className="flex flex-col items-center  justify-center gap-5 md:items-start">
-              <li>Link Shortening</li>
-              <li>Developers</li>
-              <li>Support</li>
+              <li><a href="#" className="hover:text-primary1">Link Shortening</a></li>
+              <li><a href="#" className="hover:text-primary1">Developers</a></li>
+              <li><a href="#" className="hover:text-primary1">Support</a></li>
             </ul>
           </div>
           <div>
@@ -34,26 +39,26 @@ export default function Footer() {
               Company
             </p>
             <ul className="flex flex-col items-center  justify-center gap-5 md:items-start">
-              <li>About</li>
-              <li>Our Team </li>
-              <li>Careers</li>
-              <li>Contact</li>
+              <li><a href="#" className="hover:text-primary1">About</a></li>
+              <li><a href="#" className="hover:text-primary1">Our Team</a></li>
+              <li><a href="#" className="hover:text-primary1">Careers</a></li>
+              <li><a href="#" className="hover:text-primary1">Contact</a></li>
             </ul>
           </div>
         </div>
         <div className="mt-10 flex gap-5 md:mt-0">
-          <img src="./images/icon-facebook.svg" alt="" />
-          <img src="./images/icon-twitter.svg" alt="" />
-          <img src="./images/icon-pinterest.svg" alt="" />
-          <img src="./images/icon-instagram.svg" alt="" />
+          <img src={facebook} alt="facebook" className="scale-100 transition-scale hover:scale-110 cursor-pointer "/>
+          <img src={twitter} alt="twitter" className="scale-100 transition-scale hover:scale-110 cursor-pointer"/>
+          <img src={pinterest} alt="pinterest" className="scale-100 transition-scale hover:scale-110 cursor-pointer"/>
+          <img src={instagram} alt="instagram" className="scale-100 transition-scale hover:scale-110 cursor-pointer"/>
         </div>
       </div>
-      <div className="bg-neutral4 text-center">
+      <div className="bg-neutral4 text-center text-xs">
         Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"  className="text-primary1">
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Greg Minezzi</a>.
+        . Coded by <a href="https://gregminezzi.vercel.app" className="text-primary1">Greg Minezzi</a>.
       </div>
     </footer>
   );

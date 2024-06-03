@@ -20,7 +20,7 @@ export default function Info() {
   ];
 
   return (
-    <section className="w-full bg-gray-200 px-5 py-48">
+    <section className="w-full bg-gray-200 px-5 pt-10 pb-36">
       <div className=" max-w-[1024px] m-auto">
         <div className="mb-24 flex w-full flex-col items-center justify-center gap-7">
           <p className="text-center text-4xl font-bold text-neutral3">
