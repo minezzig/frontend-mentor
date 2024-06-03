@@ -78,7 +78,7 @@ export default function ShortenForm() {
     <section className="bg-gray-200 px-5 py-0">
       <div className="m-auto  max-w-[1024px] -translate-y-16">
         <form onSubmit={handleSubmit} className="w-full">
-          <div className="mb-5 flex flex-col gap-5 rounded-lg bg-primary2 bg-[url('./images/bg-shorten-mobile.svg')] p-5 md:flex-row md:bg-[url('./images/bg-shorten-desktop.svg')] md:p-10">
+          <div className="mb-5 flex flex-col gap-5 rounded-lg bg-primary2 bg-[url('/images/bg-shorten-mobile.svg')] p-5 md:flex-row md:bg-[url('/images/bg-shorten-desktop.svg')] md:p-10">
             <div className="flex flex-col w-full relative">
               <input
                 type="text"
