@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LinkList from "./UrlList";
 
 export default function ShortenForm() {
@@ -7,6 +7,12 @@ export default function ShortenForm() {
   const [shortUrl, setShortUrl] = useState("sHoRtUrL");
   const [urlList, setUrlList] = useState([]);
   const [copied, setCopied] = useState("");
+
+  // on pageload, check to see if any url list exists in local storage
+  useEffect(() => {
+    const storedList = localStorage.getItem("urlList");
+    if (storedList) setUrlList(JSON.parse(storedList));
+  }, []);
 
   // handle text input
   const handleChange = (e) => {
@@ -31,6 +37,12 @@ export default function ShortenForm() {
       }),
     });
     const { data } = await response.json();
+
+    // set up local storage
+    localStorage.setItem(
+      "urlList",
+      JSON.stringify([{ url: data.url, tiny_url: data.tiny_url }, ...urlList]),
+    );
 
     setUrlList((prev) => [data, ...prev]);
     setLoading(false);

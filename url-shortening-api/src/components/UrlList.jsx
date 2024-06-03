@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function LinkList({ urlList, copied, handleCopy }) {
+
   return (
     <div className="flex w-full flex-col items-center justify-center gap-5">
       {urlList.map((item) => (
