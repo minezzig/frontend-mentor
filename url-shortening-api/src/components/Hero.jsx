@@ -1,5 +1,5 @@
 import Button from "./Button";
-import heroImage from "../../public/images/illustration-working.svg";
+import heroImage from "../assets/images/illustration-working.svg";
 
 export default function Hero() {
   return (
