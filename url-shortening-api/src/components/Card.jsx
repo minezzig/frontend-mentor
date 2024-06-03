@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Card({ index, card }) {
   const { title, text, img } = card;
+  console.log(img)
   return (
     <div
       style={{
@@ -10,7 +11,7 @@ export default function Card({ index, card }) {
       className={`relative flex w-full flex-1 flex-col items-center rounded-md border bg-white p-10 pt-16 md:items-start`}
     >
       <div className="absolute -top-12 left-1/2 flex -translate-x-1/2 rounded-full bg-primary2 p-6 md:left-16">
-        <img src={img} alt="missing" />
+        <img src={img} alt="icon" />
       </div>
       <h1 className="text-center text-4xl font-bold text-neutral3 md:text-left md:text-xl">
         {title}

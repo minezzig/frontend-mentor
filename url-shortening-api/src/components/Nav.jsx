@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
-import logo from "../assets/images/logo.svg";
+import logo from "/images/logo.svg";
 
 export default function Nav() {
   const [dropdownVisibility, setDropdownVisibility] = useState("hidden");
