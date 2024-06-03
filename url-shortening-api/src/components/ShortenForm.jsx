@@ -5,18 +5,15 @@ export default function ShortenForm() {
   const [longUrl, setLongUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [shortUrl, setShortUrl] = useState("sHoRtUrL");
-  const [urlList, setUrlList] = useState([
-    { long: "https://wwww.google.com/", short: "sHoRtUrL" },
-    { long: "https://wwww.matadornetwork.com/", short: "jIejfLjw3iI" },
-    { long: "https://wwww.launchpad.com/", short: "qwytruy" },
-    { long: "https://wwww.netflix.com/", short: "qrvwerq" },
-  ]);
+  const [urlList, setUrlList] = useState([]);
   const [copied, setCopied] = useState("");
 
+  // handle text input
   const handleChange = (e) => {
     setLongUrl(e.target.value);
   };
 
+  // api call when form submitted
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -25,13 +22,22 @@ export default function ShortenForm() {
     const fetchURL = `${API_URL}?api_token=${API_KEY}`;
 
     const url = longUrl;
-    // FETCH API
-    setUrlList((prev) => [{ short: shortUrl, long: longUrl }, ...prev]);
+    // FETCH API - post request with original url return tiny_url
+    const response = await fetch(fetchURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        url: url,
+      }),
+    });
+    const { data } = await response.json();
+
+    setUrlList((prev) => [data, ...prev]);
     setLoading(false);
     setLongUrl("");
-    console.log(longUrl, "===>", shortUrl);
   };
 
+  // add url to clipboard
   const handleCopy = (url) => {
     navigator.clipboard.writeText(url);
     setCopied(url);
@@ -39,7 +45,7 @@ export default function ShortenForm() {
 
   return (
     <div className="bg-gray-200 px-5 ">
-      <div className="-translate-y-16  max-w-[1024px] m-auto">
+      <div className="m-auto  max-w-[1024px] -translate-y-16">
         <form onSubmit={handleSubmit} className="w-full">
           <div className="mb-5 flex flex-col gap-5 rounded-lg bg-primary2 bg-[url('./images/bg-shorten-mobile.svg')] p-5 md:flex-row md:bg-[url('./images/bg-shorten-desktop.svg')] md:p-10">
             <input
