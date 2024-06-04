@@ -85,7 +85,7 @@ export default function ShortenForm() {
                 onChange={handleChange}
                 onFocus={() => setLongUrl("")}
                 placeholder="Shorten a link here..."
-                className={`w-full rounded-md p-3 ${error ? " outline outline-4 outline-red-400" : ""} focus:outline-none`}
+                className={`w-full outline-none rounded-md p-3 ${error ? " outline outline-4 outline-red-400" : ""} active:outline-none`}
               ></input>
               {error && (
                 <p className="mt-2 md:-bottom-6 md:absolute text-xs italic text-red-400">{error}</p>
