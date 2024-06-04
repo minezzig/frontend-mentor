@@ -41,7 +41,7 @@ export default function Nav() {
         onClick={handleClick}
       >
         <div className={`h-1 w-7 bg-neutral2 transition-all ${dropdownVisibility === "flex" ? "rotate-45 translate-y-2 origin-center" : ""}`}></div>
-        <div className={`h-1 w-7 bg-neutral2 transition-all ${dropdownVisibility === "flex" ? "w-0" : ""}`}></div>
+        <div className={`h-1 bg-neutral2 transition-all ${dropdownVisibility === "flex" ? "w-0" : "w-7"}`}></div>
         <div className={`h-1 w-7 bg-neutral2 transition-all ${dropdownVisibility === "flex" ? "-rotate-45 -translate-y-3 origin-center": ""}`}></div>
       </div>
     </header>

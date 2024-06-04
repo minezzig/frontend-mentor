@@ -58,7 +58,7 @@ export default function Footer() {
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"  className="text-primary1">
           Frontend Mentor
         </a>
-        . Coded by <a href="https://gregminezzi.vercel.app" className="text-primary1">Greg Minezzi</a>.
+        . Coded by <a href="https://github.com/minezzig/frontend-mentor/tree/main/url-shortening-api" className="text-primary1">Greg Minezzi</a>.
       </div>
     </footer>
   );
