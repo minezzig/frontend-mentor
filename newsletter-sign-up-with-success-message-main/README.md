@@ -49,7 +49,7 @@ See Above
 
 ### What I learned
 
-I actually did this project quite a while ago. I have learned a lot since I first started this project. It was interesting to see the techniques I used and how I could improve on them. Going back to this proejct also taught me alot about reviewing code. At first I found it very confusing and hard to follow what elements were being targeted because many of my class names were not clear or things were not separated into their own divs. I learned how important it is to write neat and clean code so that it can be read easily by anyone that may review it.
+I actually did this project quite a while ago. I have learned a lot since I first started this project. It was interesting to see the techniques I used and how I could improve on them. Going back to this project also taught me a lot about reviewing code. At first I found it very confusing and hard to follow what elements were being targeted because many of my class names were not clear or things were not separated into their own divs. I learned how important it is to write neat and clean code so that it can be read easily by anyone that may review it.
 
 ### Continued development
 

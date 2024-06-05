@@ -45,7 +45,7 @@ Not deployed yet
 
 ### What I learned
 
-I'm really proud of this project!  I was able to finish it quickly with few challenges.  I'm really proud that I was able to use tailwind so seamlessly.  What I learned most about this project was that there is a definite formula when creating landing pages.  Yes, styles and presentation change, but there is a set format of what to include and how to include it.  I'm getting really good at viewing the sketches for mobile and desktop and planning out how exactly I want to strucutre my HTML before begining.  
+I'm really proud of this project!  I was able to finish it quickly with few challenges.  I'm really proud that I was able to use tailwind so seamlessly.  What I learned most about this project was that there is a definite formula when creating landing pages.  Yes, styles and presentation change, but there is a set format of what to include and how to include it.  I'm getting really good at viewing the sketches for mobile and desktop and planning out how exactly I want to structure my HTML before beginning.   
 
 
 

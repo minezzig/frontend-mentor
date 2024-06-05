@@ -39,7 +39,7 @@ Users should be able to:
 
 ### What I learned
 
-This is another great example about how my skills have developed form creating small little web elements to entire web pages.  Although simple, this page shows off my skills of html, css, and vanilla javascript to create a simple page with menu bar interaction.  It is also built mobile first and responsive for larger screen.   However, this project challanged me with spacing, padding, and margin.  I was consistently had issue where the logo would go off the page or there would be a horizontal scroll bar viewable. 
+This is another great example about how my skills have developed form creating small little web elements to entire web pages.  Although simple, this page shows off my skills of html, css, and vanilla javascript to create a simple page with menu bar interaction.  It is also built mobile first and responsive for larger screen.   However, this project challenged me with spacing, padding, and margin.  I consistently had issues where the logo would go off the page or there would be a horizontal scroll bar viewable. 
 
 I'm pretty happy with the way I was able to create an overlay for the main page that would dim it slightly when the menu bar was open.  I also used the inset: 0 property which I recently learned.  This is much easier than assigning top, bottom, left, and right all to 0.
 

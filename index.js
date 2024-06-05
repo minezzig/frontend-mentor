@@ -2,6 +2,10 @@ const projectsContainer = document.getElementById("projects-container");
 
 const projects = [
   {
+    title: "Homepage - URL Shortener",
+    url: "https://url-shortener-gm.vercel.app",
+    image: "./images/screenshot.jpg",
+  },  {
     title: "Homepage - Bookmark Manager",
     url: "./bookmark-landing-page-master/",
     image: "./images/screenshots/desktop1.png",
