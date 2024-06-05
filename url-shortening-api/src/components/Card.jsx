@@ -4,7 +4,7 @@ export default function Card({ index, card }) {
   const { title, text, img } = card;
   console.log(img)
   return (
-    <div
+    <div  data-aos="zoom-in" data-aos-delay={300 * index}
       style={{
         translate: window.innerWidth > 768 ? `0 ${index * 32}px` : "0 0",
       }}

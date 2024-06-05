@@ -11,7 +11,7 @@ export default function Hero() {
           className="h-full object-cover object-left"
         />
       </div>
-      <div className="my-10 flex w-full  flex-col items-center justify-center gap-7 md:items-start">
+      <div data-aos="fade-right" className="my-10 flex w-full  flex-col items-center justify-center gap-7 md:items-start">
         <h1 className="text-center text-4xl font-bold text-neutral3 md:text-left md:text-6xl">
           More than just shorter links
         </h1>

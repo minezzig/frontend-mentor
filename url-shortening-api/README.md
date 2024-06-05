@@ -47,14 +47,14 @@ Live: [URL Shortening API](https://url-shortener-gm.vercel.app/)
 
 ### What I learned
 
-Another project complete!  This was a great project to continue working on my responsive skills and use of Tailwind.  Something that this project taught me was how to use max-width.  In the past, I had always given each section padding.  but this would skew the entire page and stretch it out to an absured amount on large screens.  With this project, I gave sections a max-width and used margin auto instad.  This allows the page to have margins but stop growing at a certain point on the largest screens.
+Another project complete!  This was a great project to continue working on my responsive skills and use of Tailwind.  Something that this project taught me was how to use max-width.  In the past, I had always given each section padding.  but this would skew the entire page and stretch it out to an absurd amount on large screens.  With this project, I gave sections a max-width and used margin auto instad.  This allows the page to have margins but stop growing at a certain point on the largest screens.
 
-I'm really enjoying tailwind, but I'm learning that it can be quite cumberson, repetitive, and messy.  I am now aware that I can preset some elements and still use classes for elements: it's not an either or, but a combination of tailwind and css classes.  
+I'm really enjoying tailwind, but I'm learning that it can be quite cumbersome, repetitive, and messy.  I am now aware that I can preset some elements and still use classes for elements: it's not an either or, but a combination of tailwind and css classes.  
 
 The clipboard and sessionStorage (as opposed to localStorage) were new for me in this project.  Rather easy to implement, but very effective!
 
 ### Continued development
 
-I don't think there is too much to be added to this specific page.  But I would like to continue learning about max-width and margin-auto.  In the past, I've also only developed for mobile and desktop.  I would like to focus more on having a variety of screen sizes and making small tweeks as screen size grows.
+I don't think there is too much to be added to this specific page.  But I would like to continue learning about max-width and margin-auto.  In the past, I've also only developed for mobile and desktop.  I would like to focus more on having a variety of screen sizes and making small tweaks as screen size grows.
 
 I would like to add sessionStorage into my Flag Frenzy game so users can see their previous scores, urging them to try their best to break there personal records.
