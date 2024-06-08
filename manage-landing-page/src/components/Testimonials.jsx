@@ -20,11 +20,11 @@ export default function Testimonials() {
           init={false}
           modules={[Pagination]}
           pagination={{ clickable: true }}
+          centeredSlides={true}
           spaceBetween={20}
           slidesPerView={1}
           breakpoints={{
-            768: { slidesPerView: 2,},
-            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2,}
           }}
           loop="true"
           className={styles.mySlider}

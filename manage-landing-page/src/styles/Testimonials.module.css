@@ -66,9 +66,8 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  .mySlider {
-    width: 125%;
-    translate: -10% 0;
+  .cardsContainer {
+    margin-inline: 0;
   }
 
 }
