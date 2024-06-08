@@ -59,7 +59,12 @@ input {
 }
 .socials li {
     list-style-type: none;
-    scale: 1.3;
+}
+.socials li a img{
+  transition: .3s;
+}
+.socials li a:hover img{
+  scale:1.3;
 }
 
 .attribution{
@@ -67,11 +72,26 @@ input {
     justify-content:center;
     font-size:.7rem;
     color: var(--neutral3);
+    padding-bottom:25px;
 }
 
 a{
+    color:var(--neutral3);
+    text-decoration: none;
+  }
+  a:hover{
+    color: var(--primary);
+  }
+
+  .attribution a  {
     color:var(--primary);
+  text-decoration: none;
 }
+a:hover{
+  filter: brightness(1.25);
+}
+
+
 @media screen and (min-width: 768px){
    .container {
     flex-direction: row;

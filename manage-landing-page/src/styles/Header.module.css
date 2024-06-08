@@ -15,6 +15,14 @@
     rotate: -90deg;
 }
 
+nav a{
+  color:var(--neutral4);
+  text-decoration: none;
+}
+nav a:hover{
+  color: var(--primary);
+}
+
 .navLinks {
     display:flex;
   position: absolute;

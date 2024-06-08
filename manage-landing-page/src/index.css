@@ -19,6 +19,7 @@ body {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 16px;
   background: var(--neutral1);
+  overflow-x:hidden;
 }
 
 section, header, footer {
@@ -32,6 +33,7 @@ p {
   line-height: 2rem;
   color: var(--neutral3);
 }
+
 
 button {
   color: var(--neutral2);
@@ -54,12 +56,6 @@ button {
 .noScroll {
   overflow-y: hidden;
 }
-
-a:hover{
-  color: var(--secondary)
-}
-
-
 
 @media screen and (min-width: 768px) {
   .mask {

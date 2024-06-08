@@ -1,0 +1,72 @@
+.fullWidth {
+  max-width: fit-content;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+
+.title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 100px;
+}
+.cardsContainer {
+  margin-bottom: 50px;
+  cursor: grab;
+}
+.cardsContainer:active {
+  cursor: grabbing;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 245, 245, 0.855);
+  padding: 50px;
+  gap: 25px;
+  position: relative;
+
+  /* width:600px; */
+}
+
+.card img {
+  width: 75px;
+  position: absolute;
+  top: 0;
+  translate: 0 -50%;
+  z-index: 10000;
+}
+
+.name {
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+}
+
+.btnDiv {
+  display: grid;
+  place-content: center;
+  margin-bottom: 150px;
+}
+
+.slide {
+  padding-top: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+.mySlider {
+  width: 120%;
+  translate: -10% 0;
+}}
+

@@ -17,33 +17,33 @@ export default function Footer() {
           </div>
           <div className={styles.links}>
             <div>
-              <li>Home</li>
-              <li>Pricing</li>
-              <li>Products</li>
-              <li>About Us</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About Us</a></li>
             </div>
             <div>
-              <li>Careers</li>
-              <li>Community</li>
-              <li>Privacy Policy</li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Privacy Policy</a></li>
             </div>
           </div>
           <div className={styles.logos}>
             <div className={styles.socials}>
               <li>
-                <img src={fb} alt="" />
+                <a href="#"><img src={fb} alt="" /></a>
               </li>
               <li>
-                <img src={yt} alt="" />
+                <a href="#"><img src={yt} alt="" /></a>
               </li>
               <li>
-                <img src={tw} alt="" />
+                <a href="#"><img src={tw} alt="" /></a>
               </li>
               <li>
-                <img src={pt} alt="" />
+                <a href="#"><img src={pt} alt="" /></a>
               </li>
               <li>
-                <img src={ig} alt="" />
+                <a href="#"><img src={ig} alt="" /></a>
               </li>
             </div>
             <img src={logo} alt="logo" />

@@ -21,11 +21,11 @@ export default function Header() {
         <img src={logo} alt="logo" />
         <nav>
           <ul className={`${styles.navLinks} ${isOpen && styles.open} `}>
-            <li>Pricing</li>
-            <li>Product</li>
-            <li>About Us</li>
-            <li>Careers</li>
-            <li>Community</li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Community</a></li>
           </ul>
         </nav>
        {isOpen && <div className="mask"></div>}
