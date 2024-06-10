@@ -56,6 +56,9 @@ input.error{
     font-size: 1rem;
 }
 
+.links ul {
+  list-style-type: none;
+}
 .links li {
     padding:10px;
 }

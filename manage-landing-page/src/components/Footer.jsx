@@ -72,31 +72,33 @@ export default function Footer() {
           </div>
           <div className={styles.logos}>
             <div className={styles.socials}>
-              <li>
-                <a href="#" aria-label="facebook">
-                  <img src={fb} alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="youtube">
-                  <img src={yt} alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="twitter">
-                  <img src={tw} alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="pinterest">
-                  <img src={pt} alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="instagram">
-                  <img src={ig} alt="" />
-                </a>
-              </li>
+              <ul className={styles.socials}>
+                <li>
+                  <a href="#" aria-label="facebook">
+                    <img src={fb} alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="youtube">
+                    <img src={yt} alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="twitter">
+                    <img src={tw} alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="pinterest">
+                    <img src={pt} alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="instagram">
+                    <img src={ig} alt="" />
+                  </a>
+                </li>
+              </ul>
             </div>
             <img src={logo} alt="logo" />
           </div>

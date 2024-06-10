@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-Live: [URL Shortening API](https://manage-landing-gm.vercel.app/)
+Live: [Manage Landing Page](https://manage-landing-gm.vercel.app/)
 
 ## My process
 
