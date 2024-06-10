@@ -5,48 +5,54 @@ const projects = [
     title: "Homepage - Manage",
     url: "https://manage-landing-gm.vercel.app",
     image: "/images/screenshot.jpg",
-  }, 
+  },
   {
     title: "Homepage - URL Shortener",
     url: "https://url-shortener-gm.vercel.app",
     image: "/images/screenshot.jpg",
-  },  {
+  },
+  {
     title: "Homepage - Bookmark Manager",
     url: "./bookmark-landing-page-master/",
-    image: "./images/screenshots/desktop1.png",
+    image: "./design/desktop-design.jpg",
   },
   {
     title: "Homepage - Loop Studios",
     url: "./loopstudios-landing-page-main/",
-    image: "./images/screenshot-desktop.png",
+    image: "./design/desktop-design.jpg",
   },
   {
     title: "Homepage - easybank",
     url: "./easybank-landing-page-master/",
-    image: "./images/screenshots/desktop.png",
+    image: "./design/desktop-design.jpg"
+
   },
 
   {
     title: "Homepage - Sunnyside Agency",
     url: "./sunnyside-agency-landing-page-main/",
-    image: "./images/screenshot-desktop.png",
+    image: "./design/desktop-design.jpg"
+
   },
 
   {
     title: "Homepage - newsfeed",
     url: "./news-homepage-main/",
-    image: "./assets/images/screenshot-desktop.png",
+    image: "./design/desktop-design.jpg"
+
   },
   {
     title: "Homepage - Snap",
     url: "./intro-section-with-dropdown-navigation-main/src/",
-    image: "../images/screenshot-desktop.jpg",
+    image: "../design/desktop-design.jpg"
+
   },
 
   {
     title: "App - Time tracking dashboard",
     url: "./time-tracking-dashboard-main/",
-    image: "./screenshots/desktop.jpg",
+    image: "./design/desktop-design.jpg"
+
   },
 
   {
@@ -58,48 +64,56 @@ const projects = [
   {
     title: "Newsletter signup",
     url: "./newsletter-sign-up-with-success-message-main/",
-    image: "./assets/images/screenshot-desktop.jpg",
+    image: "./design/desktop-design.jpg"
+
   },
 
   {
     title: "Ineractive rating component",
     url: "./interactive-rating-component-main/src/",
-    image: "../images/screenshot1.jpg",
+    image: "../design/desktop-design.jpg"
+
   },
   {
     title: "Age Calculator",
     url: "./age-calculator/",
-    image: "/assets/images/screenshot.jpg",
+    image: "/assets/images/screenshot.jpg"
+
   },
 
   {
     title: "Results summary widget",
     url: "./results-summary-component-main/src/",
-    image: "../assets/images/screenshot-desktop.jpg",
+    image: "../design/desktop-design.jpg"
+
   },
 
   {
     title: "FAQ accordian card",
     url: "./faq-accordion-card-main/",
-    image: "./images/screenshot-desktop.jpg",
+    image: "./design/desktop-design.jpg"
+
   },
 
   {
     title: "Testimonials Grid",
     url: "./testimonials-grid-section-main/",
     image: "./images/desktop-screenshot.jpg",
+
   },
 
   {
     title: "Blog post preview card",
     url: "./article-preview-component-master/src/",
-    image: "../images/screenshot-desktop.jpg",
+    image: "../design/desktop-design.jpg"
+
   },
 
   {
     title: "Profile card",
     url: "./profile-card-component-main/",
     image: "./images/screenshot.jpg",
+
   },
 ];
 
