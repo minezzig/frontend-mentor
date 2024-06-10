@@ -66,6 +66,11 @@ const projects = [
     url: "./interactive-rating-component-main/src/",
     image: "../images/screenshot1.jpg",
   },
+  {
+    title: "Age Calculator",
+    url: "./age-calculator",
+    image: "/assets/images/screenshot.jpg",
+  },
 
   {
     title: "Results summary widget",

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
   <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
   </style>
 </head>
 <body>
-  <div class="app">
+  <main class="app">
     <div class="container">
       <div class="inputContainer">
         <div class="birthdayInput">
@@ -35,28 +35,30 @@
       </div>        
       <div class="buttonContainer">
         <div class="line"></div>
-        <div id="button" class="button"><img src="./assets/images/icon-arrow.svg"/></div>
+        <div id="button" class="button"><img src="./assets/images/icon-arrow.svg" alt="arrow"/></div>
       </div>
-      <div class="results">
-        <li id="year">
-          <span class="number">- -</span>
-          years
-        </li>
-        <li id="month">
-          <span class="number">- -</span>
-          months
-        </li>
-        <li id="day">
-          <span class="number">- -</span>
-          days
-        </li>
+      <div>
+        <ul class="results">
+          <li id="year">
+            <span class="number">- -</span>
+            years
+          </li>
+          <li id="month">
+            <span class="number">- -</span>
+            months
+          </li>
+          <li id="day">
+            <span class="number">- -</span>
+            days
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-  <div class="attribution">
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Greg Minezzi</a>.
-  </div>
+  </footer>
   <script src="./index.js"></script>
 </body>
 </html>
