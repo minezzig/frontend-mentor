@@ -13,7 +13,7 @@ import "swiper/css/bundle";
 
 export default function Testimonials() {
   return (
-    <section className={styles.fullWidth}>
+    <div className={styles.fullWidth}>
       <div className={styles.title}> What they’ve said</div>
       <div className={styles.cardsContainer}>
         <Swiper
@@ -81,6 +81,6 @@ export default function Testimonials() {
       <div className={styles.btnDiv}>
         <button>Get Started</button>
       </div>
-    </section>
+    </div>
   );
 }

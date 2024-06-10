@@ -41,55 +41,59 @@ export default function Footer() {
           </form>
           <div className={styles.links}>
             <div>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Pricing</a>
-              </li>
-              <li>
-                <a href="#">Products</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
-              </li>
+              <ul>
+                <li>
+                  <a href="#" aria-label="Home">Home</a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Pricing">Pricing</a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Products">Products</a>
+                </li>
+                <li>
+                  <a href="#" aria-label="About Us">About Us</a>
+                </li>
+              </ul>
             </div>
             <div>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-              <li>
-                <a href="#">Community</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
+              <ul>
+                <li>
+                  <a href="#" aria-label="Careers">Careers</a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Community">Community</a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+                </li>
+              </ul>
             </div>
           </div>
           <div className={styles.logos}>
             <div className={styles.socials}>
               <li>
-                <a href="#">
+                <a href="#" aria-label="facebook">
                   <img src={fb} alt="" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" aria-label="youtube">
                   <img src={yt} alt="" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" aria-label="twitter">
                   <img src={tw} alt="" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" aria-label="pinterest">
                   <img src={pt} alt="" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" aria-label="instagram">
                   <img src={ig} alt="" />
                 </a>
               </li>
