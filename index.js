@@ -68,7 +68,7 @@ const projects = [
   },
   {
     title: "Age Calculator",
-    url: "./age-calculator",
+    url: "./age-calculator/",
     image: "/assets/images/screenshot.jpg",
   },
 
