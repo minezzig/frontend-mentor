@@ -1,9 +1,19 @@
+.differences{
+    position:relative;
+}
 .container {
     display: flex;
     flex-direction: column;
     padding-block: 100px;
 }
 
+/* .blob{
+    position:absolute;
+    z-index:-50;
+    scale:.5;
+    top:-50%;
+    right:-80%
+} */
 .introContainer {
     display:flex;
     flex-direction:column;
@@ -53,6 +63,15 @@
     .container {
         flex-direction: row;
         gap:130px;
+    }
+    /* .blob{
+        position:absolute;
+        z-index:-50;
+        translate: -70% 40%;
+    } */
+
+    .content{
+        text-align:left
     }
     .number {
         margin-right: 32px;

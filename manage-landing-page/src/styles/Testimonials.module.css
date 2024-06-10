@@ -32,11 +32,9 @@
   align-items: center;
   justify-content: center;
   background: rgba(245, 245, 245, 0.855);
-  padding: 50px;
+  padding: 50px 20px;
   gap: 25px;
   position: relative;
-
-  /* width:600px; */
 }
 
 .card img {
@@ -53,6 +51,7 @@
 
 p {
   text-align: center;
+  font-size: .8rem;
 }
 
 .btnDiv {
@@ -69,5 +68,10 @@ p {
   .cardsContainer {
     margin-inline: 0;
   }
-
+  .card {
+    padding:50px;
+  }
+  .card p {
+    font-size: 1rem;
+  }
 }

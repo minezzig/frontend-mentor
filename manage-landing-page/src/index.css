@@ -48,6 +48,11 @@ button {
   cursor: pointer;
 }
 
+button:hover{
+  box-shadow:0 20px 20px -15px rgb(0, 0, 0, .5);
+  translate:1px 1px;
+}
+
 .mask {
   position: absolute;
   inset: 0;

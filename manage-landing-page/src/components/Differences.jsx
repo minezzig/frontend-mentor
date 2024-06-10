@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "../styles/Differences.module.css";
-
+import blob from "../assets/images/bg-tablet-pattern.svg"
 export default function Differences() {
   return (
     <section className={styles.differences}>
+      {/* <img src={blob} className={styles.blob} alt="blob"/> */}
       <div className={styles.container}>
         <div className={styles.introContainer}>
           <h2 className={styles.title}>What’s different about Manage?</h2>
