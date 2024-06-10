@@ -2,6 +2,11 @@ const projectsContainer = document.getElementById("projects-container");
 
 const projects = [
   {
+    title: "Homepage - Manage",
+    url: "https://manage-landing-gm.vercel.app",
+    image: "/images/screenshot.jpg",
+  }, 
+  {
     title: "Homepage - URL Shortener",
     url: "https://url-shortener-gm.vercel.app",
     image: "/images/screenshot.jpg",
