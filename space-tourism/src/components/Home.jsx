@@ -12,7 +12,7 @@ export const Home = () => {
             experience!
           </div>
         </div>
-        <div className="explore heading-sm">Explore</div>
+        <a href="/destination"><div className="explore heading-sm">Explore</div></a>
       </div>
     </main>
   );

@@ -21,6 +21,10 @@ body {
   background: var(--background);
   color: var(--primary);
 }
+a{
+  text-decoration: none;
+  color:inherit;
+}
 
 .heading-xl {
   font-family: "Bellefair", serif;
@@ -108,7 +112,7 @@ body {
   }
 }
 
-/* ----------------------------- header ----------------------------- */
+/* ----------------------------- HEADER ----------------------------- */
 
 header {
   display: flex;
@@ -116,7 +120,7 @@ header {
   justify-content: space-between;
   background: var(--background);
   padding: 1rem 3rem;
-  padding-left: 3rem;
+
 }
 
 .hamburger {
@@ -163,14 +167,15 @@ nav.open li:hover {
   border-right: 3px solid var(--primary);
 }
 
-/* media queries */
+/* media queries  tablet -------------------- */
 @media (min-width: 768px) {
   .hamburger {
     display: none;
   }
   header {
     height: 5rem;
-    padding-right:0;
+    padding-right: 0;
+    padding-block:0
   }
   nav {
     display: flex;
@@ -210,6 +215,7 @@ nav.open li:hover {
     margin-right: 5px;
   }
 }
+/* media queries  desktop -------------------- */
 
 @media (min-width: 1024px) {
   header {
@@ -221,12 +227,12 @@ nav.open li:hover {
   }
 }
 
-/* ----------------------------- home ----------------------------- */
+/* ----------------------------- HOME ----------------------------- */
 main {
   height: calc(100dvh - 5rem);
-  padding-top:2rem;
+  padding-top: 2rem;
   max-width: 1280px;
-  margin:auto;
+  margin: auto;
 }
 .home-container {
   display: flex;
@@ -274,11 +280,13 @@ main .heading-xl {
   color: grey;
   scale: 0.98;
 }
+/* media queries  tablet -------------------- */
 @media (min-width: 768px) {
-  main{
-    padding-top:6rem;
+  main {
+    padding-top: 6rem;
   }
 }
+/* media queries  desktop -------------------- */
 @media (min-width: 1024px) {
   .home-container {
     flex-direction: row;
@@ -298,3 +306,5 @@ main .heading-xl {
     margin: 0;
   }
 }
+
+/* ----------------------------- DESTINATION ----------------------------- */

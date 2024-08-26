@@ -18,10 +18,10 @@ export const Header = () => {
       </div>
       <nav className={`${menuOpen && 'open'}`}>
         <ul className="nav-text">
-          <li>home</li>
-          <li><span>01 </span>destination</li>
-          <li><span>02 </span>crew</li>
-          <li><span>03 </span>technology</li>
+          <li><a href="/" title="home">home</a></li>
+          <li><a href="/destination" title="destination"><span>01 </span>destination</a></li>
+          <li><a href="/crew" title="crew"><span>02 </span>crew</a></li>
+          <li><a href="/technology" title="technology"><span>03 </span>technology</a></li>
         </ul>
       </nav>
     </header>
