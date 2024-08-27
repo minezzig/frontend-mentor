@@ -4,7 +4,6 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   console.log(menuOpen)
   
-
   const toggleMenu = () => {
     setMenuOpen(prev => !prev);
   }
