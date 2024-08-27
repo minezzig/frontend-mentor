@@ -4,6 +4,7 @@ import { Header } from "../components/Header";
 export const Crew = () => {
   const [crewData, setCrewData] = useState([]);
   const [crewMember, setCrewMember] = useState({})
+  const [activeDot, setActiveDot] = useState(0);
 
   useEffect(() => {
     const getCrewData = async () => {
@@ -11,11 +12,15 @@ export const Crew = () => {
       const data = await response.json();
       setCrewData(data.crew);
       setCrewMember(data.crew[0]);
-      console.log(data.crew[0])
+      console.log(data.crew)
     };
     getCrewData();
   }, []);
 
+  const handleCrewMember = (index) => {
+    setActiveDot(index);
+    setCrewMember(crewData[index]);
+  }
   return (
     <section className="crew">
       <Header />
@@ -29,10 +34,13 @@ export const Crew = () => {
             <div className="bio">{crewMember.bio}</div>
           </div>
           <div className="dots">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+          {crewData.map((member, index) => (
+          <div
+            key={index}
+            onClick={() => handleCrewMember(index)}
+            className={`dot ${activeDot === index ? 'active' : ''}`}
+          ></div>
+        ))}
           </div>
         </div>
         <div className="crew-image">

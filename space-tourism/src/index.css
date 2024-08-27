@@ -457,6 +457,10 @@ main .heading-xl {
   width: .5rem;
   border-radius: 50%;
   background: grey;
+  cursor: pointer;
+}
+.dot.active {
+  background: white;
 }
 .crew-image {
   margin:auto;
