@@ -19,9 +19,9 @@ body {
   background: var(--background);
   color: var(--primary);
 }
-a{
+a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 .heading-xl {
   font-family: "Bellefair", serif;
@@ -74,6 +74,7 @@ a{
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: var(--secondary);
 }
 .nav-text {
   font-family: "Barlow Condensed", system-ui;
@@ -84,7 +85,7 @@ a{
   text-transform: uppercase;
 }
 .app {
-  height: 100dvh;
+  min-height: 100dvh;
   background-image: url("../src/assets/home/background-home-mobile.jpg");
   background-position: bottom;
   background-size: cover;
@@ -108,8 +109,11 @@ header {
   background: var(--background);
   padding: 1rem 3rem;
 }
-.desktop-bar{
-  display:none;
+.logo {
+  cursor: pointer;
+}
+.desktop-bar {
+  display: none;
 }
 .hamburger {
   z-index: 100;
@@ -131,8 +135,8 @@ nav.open {
   position: absolute;
   background: rgba(var(--background), 0.1);
   inset: 0;
-  width:300px;
-  left:auto;
+  width: 300px;
+  left: auto;
   backdrop-filter: blur(20px);
 }
 nav.open ul {
@@ -157,16 +161,16 @@ nav.open li:hover {
   header {
     height: 5rem;
     padding-right: 0;
-    padding-block:0;
+    padding-block: 0;
   }
   nav {
     display: flex;
     height: 100%;
-    width:100%;
+    width: 100%;
     padding-inline: 3rem;
-    margin-left:3rem;
+    margin-left: 3rem;
     align-items: center;
-    justify-content:flex-end;
+    justify-content: flex-end;
     background: rgb(28, 29, 37);
   }
   nav ul {
@@ -202,23 +206,23 @@ nav.open li:hover {
 @media (min-width: 1024px) {
   header {
     translate: 0 1.5rem;
-    position:relative;
+    position: relative;
   }
   nav {
-    background:rgb(255, 255, 255,.1);
+    background: rgb(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    margin-left:auto;
-    width:auto;
+    margin-left: auto;
+    width: auto;
   }
   .desktop-bar {
-    display:block;
-    flex:1;
-    translate:2rem 0;
-    z-index:10;
+    display: block;
+    flex: 1;
+    translate: 2rem 0;
+    z-index: 10;
   }
-  .desktop-bar hr{
-    width:100%;
-    opacity: .3;
+  .desktop-bar hr {
+    width: 100%;
+    opacity: 0.3;
   }
 }
 /* ----------------------------- HOME ----------------------------- */
@@ -294,3 +298,124 @@ main .heading-xl {
 }
 
 /* ----------------------------- DESTINATION ----------------------------- */
+section {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 3rem;
+  background: url("../src/assets/destination/background-destination-mobile.jpg");
+  min-height: 100dvh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height:100%
+}
+.destination-title {
+  font-size: 1rem;
+}
+.destination-content-container {
+  display: flex;
+  flex-direction: column;
+}
+.destination-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.planet-image {
+  max-width: 150px;
+  margin: 2rem auto;
+}
+.planet-image img {
+  width: 100%;
+}
+.planet-selection {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.planet-name {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.destination-description {
+  color: var(--secondary);
+  line-height: 1.5rem;
+}
+.destination hr {
+  width: 100%;
+  opacity: 0.3;
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.label {
+  margin-bottom: 1rem;
+}
+
+
+/* ------ mediaquery tablet */
+@media (min-width: 768px) {
+  section {
+    background: url("../src/assets/destination/background-destination-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .stats {
+    flex-direction:row;
+    justify-content: space-around;
+    width:100%;
+  }
+}
+
+/* ------ mediaquery tablet */
+@media (min-width: 1024px) {
+  section {
+    background: url("../src/assets/destination/background-destination-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .destination-content-container {
+    flex-direction:row;
+    padding-inline:5rem;
+    gap:3rem;
+  }
+  .destination-title {
+    font-size:1.5rem;
+    text-align: left;
+    padding:5rem;
+  }
+  .destination-content{
+    gap:1rem;
+    max-width:400px;
+  }
+  .planet-image {
+    max-width:400px;
+    flex:1;
+  }
+  .destination-content {
+    flex:1;
+  }
+  .planet-selection{
+    width:100%;
+    justify-content: flex-start;
+  }
+  .planet-name{
+    text-align:left; 
+    font-size:5rem;
+    margin-bottom:1rem;
+  }
+.destination-description{
+    text-align:left;
+  }
+  .stats {
+    justify-content: flex-start;
+  }
+}

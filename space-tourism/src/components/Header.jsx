@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  console.log(menuOpen)
+  const navigate = useNavigate();
   
   const toggleMenu = () => {
     setMenuOpen(prev => !prev);
   }
+  
     return (
     <header>
-      <div className="logo">
+      <div className="logo" onClick={() => navigate("/")}>
         <img src="../../src/assets/shared/logo.svg" alt="logo"/>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
@@ -20,10 +22,10 @@ export const Header = () => {
       </div>
       <nav className={`${menuOpen && 'open'}`}>
         <ul className="nav-text">
-          <li><a href="/" title="home"><span>00 </span>home</a></li>
-          <li><a href="/destination" title="destination"><span>01 </span>destination</a></li>
-          <li><a href="/crew" title="crew"><span>02 </span>crew</a></li>
-          <li><a href="/technology" title="technology"><span>03 </span>technology</a></li>
+          <li onClick={() => navigate("/")}><span>00 </span>home</li>
+          <li onClick={() => navigate("/destination")}><span>01 </span>destination</li>
+          <li onClick={() => navigate("/crew")}><span>02 </span>crew</li>
+          <li onClick={() => navigate("/technology")}><span>03 </span>technology</li>
         </ul>
       </nav>
     </header>
