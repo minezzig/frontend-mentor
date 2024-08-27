@@ -103,7 +103,7 @@ header {
   display: none;
 }
 .hamburger {
-  z-index: 100;
+  z-index: 1000;
 }
 nav {
   display: none;
@@ -125,6 +125,7 @@ nav.open {
   width: 300px;
   left: auto;
   backdrop-filter: blur(20px);
+  z-index: 100;
 }
 nav.open ul {
   margin: 10rem 3rem;
@@ -304,6 +305,9 @@ main .heading-xl {
 /* ----------------------------- DESTINATION ----------------------------- */
 .destination {
   background: url("../src/assets/destination/background-destination-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
 .destination-title {
   font-size: 1rem;
@@ -325,6 +329,11 @@ main .heading-xl {
 .planet-image {
   max-width: 150px;
   margin: 2rem auto;
+  animation: orbit 8s linear infinite;
+}
+@keyframes orbit {
+  from   {rotate:0deg}
+  to {rotate:360deg}
 }
 .planet-image img {
   width: 100%;
@@ -338,6 +347,21 @@ main .heading-xl {
 }
 .planet-selection li {
   cursor: pointer;
+  position: relative;
+}
+.planet-selection li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  left: 0;
+  bottom: -1rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+.planet-selection li:hover::after {
+  opacity: 1;
 }
 .planet-name {
   font-size: 3rem;
@@ -446,15 +470,15 @@ main .heading-xl {
   line-height: 2rem;
 }
 .dots {
-  margin-block:3rem;
+  margin-block: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
 }
 .dots div {
-  height: .5rem;
-  width: .5rem;
+  height: 0.5rem;
+  width: 0.5rem;
   border-radius: 50%;
   background: grey;
   cursor: pointer;
@@ -463,7 +487,7 @@ main .heading-xl {
   background: white;
 }
 .crew-image {
-  margin:auto;
+  margin: auto;
   max-width: 400px;
 }
 .crew-image img {
@@ -475,11 +499,11 @@ main .heading-xl {
   .crew {
     background-image: url("../src/assets/crew/background-crew-tablet.jpg");
   }
-  .crew-title{
-    text-align:left;
+  .crew-title {
+    text-align: left;
   }
   .bio {
-    margin:auto;
+    margin: auto;
     max-width: 800px;
   }
 }
@@ -489,33 +513,33 @@ main .heading-xl {
   .crew {
     background-image: url("../src/assets/crew/background-crew-desktop.jpg");
   }
-  .crew-container{
-    padding-inline:5rem;
+  .crew-container {
+    padding-inline: 5rem;
   }
-  .crew-content-container{
-    display:flex;
-    position:relative;
+  .crew-content-container {
+    display: flex;
+    position: relative;
   }
-  .crew-container{
-    text-align:left;
+  .crew-container {
+    text-align: left;
   }
-  .crew-content{
-    display:grid;
+  .crew-content {
+    display: grid;
     place-content: center;
-    height:100%;
+    height: 100%;
   }
   .name {
-    font-size:3rem;
-    margin-bottom:1rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
-  .dots{
-    gap:3rem;
-    position:absolute;
-    bottom:0;
-    left:0;
+  .dots {
+    gap: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   .dots div {
-    height:.7rem;
-    width:.7rem;
+    height: 0.7rem;
+    width: 0.7rem;
   }
 }

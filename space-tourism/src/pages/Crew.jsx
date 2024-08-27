@@ -12,7 +12,6 @@ export const Crew = () => {
       const data = await response.json();
       setCrewData(data.crew);
       setCrewMember(data.crew[0]);
-      console.log(data.crew)
     };
     getCrewData();
   }, []);
