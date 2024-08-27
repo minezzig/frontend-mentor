@@ -1,6 +1,9 @@
+import { Header } from "../components/Header";
+
 export const Home = () => {
   return (
-    <main>
+    <section className="home">
+      <Header />
       <div className="home-container">
         <div className="header-container">
           <div className="heading-xs">So, you want to travel to </div>
@@ -14,6 +17,6 @@ export const Home = () => {
         </div>
         <a href="/destination"><div className="explore heading-sm">Explore</div></a>
       </div>
-    </main>
+    </section>
   );
 };

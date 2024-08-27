@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Header} from "../components/Header"
 
 export const Destination = () => {
   const [destinationData, setDestinationData] = useState([]);
@@ -24,16 +25,15 @@ export const Destination = () => {
     setDestination(foundDestination);
   };
   return (
-      
-
     <section className="destination">
-      <div>
+      <Header />
+      <div className="destination-container">
         <div className="destination-title heading-xs">
-          01 pick your destination
+          <span>01</span> pick your destination
         </div>
         <div className="destination-content-container">
           <div className="planet-image">
-            <img src={destination.images && `../src${(destination.images.png).slice(1)}` } alt="moon" />
+            <img src={destination.images && `../src${(destination.images.png).slice(1)}` } alt={destination.name} />
           </div>
           <div className="destination-content">
             <div className="planet-selection nav-text">
