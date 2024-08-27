@@ -23,8 +23,9 @@ export const Destination = () => {
     );
     setDestination(foundDestination);
   };
-
   return (
+      
+
     <section className="destination">
       <div>
         <div className="destination-title heading-xs">
@@ -32,7 +33,7 @@ export const Destination = () => {
         </div>
         <div className="destination-content-container">
           <div className="planet-image">
-            <img src="../src/assets/destination/image-moon.png" alt="moon" />
+            <img src={destination.images && `../src${(destination.images.png).slice(1)}` } alt="moon" />
           </div>
           <div className="destination-content">
             <div className="planet-selection nav-text">
