@@ -104,6 +104,7 @@ header {
 }
 .hamburger {
   z-index: 1000;
+  cursor: pointer;
 }
 nav {
   display: none;
@@ -309,6 +310,9 @@ main .heading-xl {
   background-position: bottom;
   background-size: cover;
 }
+.destination-container{
+  padding: 3rem;
+}
 .destination-title {
   font-size: 1rem;
 }
@@ -409,7 +413,7 @@ main .heading-xl {
   .destination-title {
     font-size: 1.5rem;
     text-align: left;
-    padding: 5rem;
+    padding: 3rem 5rem;
   }
   .destination-content {
     gap: 1rem;
@@ -513,6 +517,9 @@ main .heading-xl {
   .crew {
     background-image: url("../src/assets/crew/background-crew-desktop.jpg");
   }
+  .crew-title {
+    font-size:1.5rem;
+  }
   .crew-container {
     padding-inline: 5rem;
   }
@@ -542,4 +549,110 @@ main .heading-xl {
     height: 0.7rem;
     width: 0.7rem;
   }
+}
+/* ----------------------------- TECHNOLOGY ----------------------------- */
+.technology {
+  background: url("../src/assets/technology/background-technology-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.technology-container {
+  padding: 3rem;
+}
+.technology-subtitle {
+  color:grey;
+  font-size:1rem;
+}
+.technology-title {
+  font-size: 1.5rem;
+  margin-bottom:5rem;
+}
+.technology-title span {
+  color: grey;
+}
+.technology-image{
+  object-fit:contain;
+}
+.technology-image img {
+  width: 100%;
+}
+.technology-content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:1rem;
+}
+.tech-navigate{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  gap:2rem;
+}
+.selection{
+  margin-block:2rem;
+  cursor: pointer;
+  border-radius:50%;
+  height:2rem;
+  width:2rem;
+  border:.2px solid grey;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.selection.selected{
+  background:var(--primary);
+  color:rgba(var(--background), 1);
+}
+.technology-name{
+  font-size:1.5rem;
+}
+
+/* ------technology mediaquery tablet */
+@media (min-width: 768px) {
+  .technology {
+    background-image: url("../src/assets/technology/background-technology-tablet.jpg");
+  }
+  .technology-title {
+    text-align: left;
+  }
+}
+
+/* ------ crew mediaquery tablet */
+@media (min-width: 1024px) {
+  .technology {
+    background-image: url("../src/assets/technology/background-technology-desktop.jpg");
+  }
+  .technology-title {
+    font-size:1.5rem;
+  }
+  .technology-container {
+    padding-inline: 5rem;
+  }
+  .technology-content-container {
+    display: flex;
+    position: relative;
+    align-items:center;
+    justify-content:center;
+    gap:3rem;
+  }
+  .tech-navigate{
+    order:1;
+    flex-direction:column;
+    gap:0rem;
+  }
+  .selection {
+    height:3rem;
+    width:3rem;
+    font-size:1.5rem;
+  }
+  .technology-content{
+    order:2;
+    align-items: flex-start;
+  }
+  .technology-image{
+    order:3
+  }
+
 }
