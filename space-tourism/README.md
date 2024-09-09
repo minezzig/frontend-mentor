@@ -2,8 +2,8 @@
 
 This is a solution to the [Space tourism multi-page website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-<img src="./src/screenshots/screenshot-desktop.jpg" alt="desktop1" width="400"/>
-<img src="./src/screenshots/screenshot-mobile.png" alt="desktop1" width="400"/>
+<img src="./src/screenshots/screenshot-desktop.jpg" alt="desktop" width="400"/>
+<img src="./src/screenshots/screenshot-mobile.png" alt="mobile" width="400"/>
 
 
 ## Table of contents

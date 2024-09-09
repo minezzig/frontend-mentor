@@ -3,7 +3,7 @@ import heroImage from "/images/illustration-working.svg";
 
 export default function Hero() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 px-5 mb-48 md:flex-row-reverse md:justify-between max-w-[1024px] m-auto overflow-x-hidden">
+    <section className="m-auto mb-48 grid max-w-[1024px] grid-cols-1 overflow-x-hidden px-5 md:grid-cols-2 md:flex-row-reverse md:justify-between">
       <div className="md:order-2 ">
         <img
           src={heroImage}
