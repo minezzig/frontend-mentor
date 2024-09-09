@@ -12,10 +12,10 @@ export const Header = () => {
     return (
     <header>
       <div className="logo" onClick={() => navigate("/")}>
-        <img src="../../src/assets/shared/logo.svg" alt="logo"/>
+        <img src="./assets/shared/logo.svg" alt="logo"/>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
-        <img src={`../../src/assets/shared/icon-${menuOpen ? 'close' : 'hamburger'}.svg`} alt="menu" />
+        <img src={`./assets/shared/icon-${menuOpen ? 'close' : 'hamburger'}.svg`} alt="menu" />
       </div>
       <div className="desktop-bar">
         <hr/>

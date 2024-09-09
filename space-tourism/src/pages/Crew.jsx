@@ -8,7 +8,7 @@ export const Crew = () => {
 
   useEffect(() => {
     const getCrewData = async () => {
-      const response = await fetch("../../data.json");
+      const response = await fetch("/data.json");
       const data = await response.json();
       setCrewData(data.crew);
       setCrewMember(data.crew[0]);
@@ -43,7 +43,7 @@ export const Crew = () => {
           </div>
         </div>
         <div className="crew-image">
-          <img src={crewMember.images && `../src${(crewMember.images.png).slice(1)}` } />
+          <img src={crewMember.images && `${(crewMember.images.png).slice(1)}` } />
         </div>
       </div>
       </div>

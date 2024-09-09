@@ -10,7 +10,7 @@ export const Technology = () => {
   // fetch tech data and set the first set of data to appear
   useEffect(() => {
     async function getTechnologyData() {
-      const response = await fetch("../../data.json");
+      const response = await fetch("/data.json");
       const data = await response.json();
       setTechnologyData(data.technology)
       setTechnology(data.technology[0]);
@@ -45,7 +45,7 @@ export const Technology = () => {
           <div className="technology-image">
             <img
               src={technology.images && 
-              `../src${width< 1024 
+              `${width< 1024 
               ? technology.images.landscape.slice(1)
               : technology.images.portrait.slice(1)}`}/>
           </div>

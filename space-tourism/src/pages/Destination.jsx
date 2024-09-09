@@ -8,7 +8,7 @@ export const Destination = () => {
   // fetch json data for destination
   useEffect(() => {
     const getDestinationsData = async () => {
-      const response = await fetch("../../data.json");
+      const response = await fetch("./data.json");
       const data = await response.json();
       setDestinationData(data.destinations);
       // initially set destination to be 0, moon
@@ -33,7 +33,7 @@ export const Destination = () => {
         </div>
         <div className="destination-content-container">
           <div className="planet-image">
-            <img src={destination.images && `../src${(destination.images.png).slice(1)}` } alt={destination.name} />
+            <img src={destination.images && `${(destination.images.png).slice(1)}` } alt={destination.name} />
           </div>
           <div className="destination-content">
             <div className="planet-selection nav-text">
