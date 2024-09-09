@@ -5,8 +5,9 @@ export const Technology = () => {
   const [technologyData, setTechnologyData] = useState([]);
   const [technology, setTechnology] = useState({});
   const [techIndex, setTechIndex] = useState(0);
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(window.innerWidth);
   
+  // fetch tech data and set the first set of data to appear
   useEffect(() => {
     async function getTechnologyData() {
       const response = await fetch("../../data.json");
@@ -17,6 +18,7 @@ export const Technology = () => {
     getTechnologyData();
   }, []);
 
+  // add event listener to keep track of window size and store in state
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -26,6 +28,7 @@ export const Technology = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // set state of the index chosen to view
   const handleSetTechnology = (techIndex) => {
     setTechnology(technologyData[techIndex]);
     setTechIndex(techIndex)

@@ -393,6 +393,9 @@ main .heading-xl {
   .destination {
     background-image: url("../src/assets/destination/background-destination-tablet.jpg");
   }
+  .destination-title{
+    text-align:left;
+  }
   .stats {
     flex-direction: row;
     justify-content: space-around;
@@ -413,7 +416,7 @@ main .heading-xl {
   .destination-title {
     font-size: 1.5rem;
     text-align: left;
-    padding: 3rem 5rem;
+    padding:0 2rem
   }
   .destination-content {
     gap: 1rem;
@@ -565,7 +568,7 @@ main .heading-xl {
   font-size:1rem;
 }
 .technology-title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom:5rem;
 }
 .technology-title span {
@@ -600,6 +603,7 @@ main .heading-xl {
   display:flex;
   align-items:center;
   justify-content:center;
+  transition: .5s all;
 }
 .selection.selected{
   background:var(--primary);
