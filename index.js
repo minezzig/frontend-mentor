@@ -2,6 +2,11 @@ const projectsContainer = document.getElementById("projects-container");
 
 const projects = [
   {
+    title: "E-Commerce Product Page",
+    url: "https://fm-e-commerce-product-page-gm.vercel.app",
+    image: "/images/preview.jpg",
+  },
+  {
     title: "Product List with Cart",
     url: "https://fm-product-list-with-cart-gm.vercel.app",
     image: "/images/screenshot.jpg",
